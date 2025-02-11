@@ -1,0 +1,1610 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PsyCall | Henry</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="portfolio.js">
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    #cursor {
+      transition: all 20ms linear;
+    }
+  </style>
+  <body onmousemove="moveCursor(event)">
+    <div
+      id="cursor"
+      class="size-40 bg-primary-700 blur-3xl rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+    ></div>
+    <div
+      class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col items-center gap-12 lg:gap-15"
+    >
+      <!-- navigation bar -->
+      <div class="flex justify-between items-center py-3 w-full">
+        <!-- personal logo -->
+        <a href="index.html" class="z-0">
+          <img src="images/logo.png" alt=""/>
+        </a>
+        
+        <!-- menu -->
+        <div
+          id="desktopMenu"
+          class="flex gap-8 items-baseline ml-auto hidden sm:flex z-0"
+        >
+          <a href="work.html" class="text-button2 lg:text-button1">Work</a>
+          <a href="about.html" class="text-button2 lg:text-button1">About</a>
+          <!-- button -->
+          <div
+            class="flex items-center rounded-5 p-small bg-gradient-to-r from-secondary-700 to-primary-700 hover:shadow-buttonhover"
+          >
+            <a
+              href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION"
+              class="text-button2 lg:text-button1 rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+        <img
+          src="images/icon-menu.png"
+          alt=""
+          class="sm:hidden size-10"
+          onclick="toggleMenu()"
+        />
+        <div
+          id="mobileMenu"
+          class="fixed top-0 right-0 h-screen w-screen flex flex-col gap-3 bg-background/80 backdrop-blur-md px-5 pt-3 hidden z-20"
+        >
+          <div class="flex justify-between items-center">
+            <img src="images/logo.png" alt="" />
+            <img
+              src="images/icon-x.png"
+              alt=""
+              class="size-10"
+              onclick="toggleMenu()"
+            />
+          </div>
+          <a href="index.html" class="flex justify-between items-center pt-7">
+            <div class="font-inter text-2xl text-white/80">Home</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="work.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter text-2xl text-white/80">Work</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="about.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter text-2xl text-white/80">About</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a
+            href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION"
+            class="flex justify-between items-center pt-6"
+          >
+            <div class="font-inter text-2xl text-white/80">Contact</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div
+            class="absolute top-40 -left-12 h-96 w-66 bg-secondary-600 blur-250"
+          ></div>
+          <div class="w-full h-xxs bg-white/60"></div>
+        </div>
+      </div>
+      <!-- intro section -->
+      <div
+        class="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-0 lg:gap-12 z-0"
+      >
+        <div
+          class="flex flex-col items-center justify-center gap-5 md:gap-8 lg:gap-20 w-full"
+        >
+          <div
+            class="font-anton text-4xl md:text-6xl lg:text-8xl text-primary-200 wow animate__animated animate__fadeInDown"
+          >
+            PSYCALL
+          </div>
+          <div class="grid grid-cols-2 gap-2 md:gap-4 w-full wow animate__animated animate__fadeInUp">
+            <div class="text-xs font-inter lg:text-lg xl:text-xl text-white/50">
+              UI UX Designer: <span class="text-white/90">Hoai Ngoc</span>
+            </div>
+            <div class="text-xs font-inter lg:text-lg xl:text-xl text-white/50">
+              Process: <span class="text-white/90">Design Thinking</span>
+            </div>
+            <div class="text-xs font-inter lg:text-lg xl:text-xl text-white/50">
+              Design: <span class="text-white/90">Mobile App</span>
+            </div>
+            <div class="text-xs font-inter lg:text-lg xl:text-xl text-white/50">
+              Duration: <span class="text-white/90">1 month (Oct 2024)</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative z-0 wow animate__animated animate__fadeInRight">
+          <img src="images/psycall-mocmain.svg" alt="" class="w-56 lg:w-110" />
+          <div
+            class="size-130 bg-primary-600 blur-800 absolute top-4 left-52 -z-10"
+          ></div>
+        </div>
+      </div>
+      <!-- problem statement -->
+      <div class="flex flex-col gap-3 md:gap-6 lg:gap-10 z-10">
+        <div class="flex items-center justify-center gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="12"
+            viewBox="0 0 46 12"
+            fill="none"
+          >
+            <path
+              d="M0.166667 6C0.166667 8.94552 2.55448 11.3333 5.5 11.3333C8.44552 11.3333 10.8333 8.94552 10.8333 6C10.8333 3.05448 8.44552 0.666667 5.5 0.666667C2.55448 0.666667 0.166667 3.05448 0.166667 6ZM5.5 7H10.5V5H5.5V7ZM20.5 7H30.5V5H20.5V7ZM40.5 7H45.5V5H40.5V7Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="text-body2 md:font-anton md:text-xl md:text-white/60 lg:text-3xl"
+          >
+            Vấn đề tâm thần trở thành mối đe dọa đối với đời sống sinh hoạt của
+            con người
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 md:gap-6">
+          <img
+            src="images/psycall-ps-1.svg"
+            alt=""
+            class="rounded-lg row-span-2 object-cover size-full shadow-pcps wow animate__animated animate__fadeInUp"
+          />
+          <img
+            src="images/psycall-ps-2.svg"
+            alt=""
+            class="rounded-lg object-cover shadow-pcps wow animate__animated animate__fadeInUp"
+          />
+          <img
+            src="images/psycall-ps-3.svg"
+            alt=""
+            class="rounded-lg object-cover shadow-pcps wow animate__animated animate__fadeInUp"
+          />
+        </div>
+      </div>
+      <!-- design thinking process -->
+      <div class="flex flex-col gap-8 relative z-0">
+        <div class="flex items-center justify-center gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="12"
+            viewBox="0 0 46 12"
+            fill="none"
+          >
+            <path
+              d="M0.166667 6C0.166667 8.94552 2.55448 11.3333 5.5 11.3333C8.44552 11.3333 10.8333 8.94552 10.8333 6C10.8333 3.05448 8.44552 0.666667 5.5 0.666667C2.55448 0.666667 0.166667 3.05448 0.166667 6ZM5.5 7H10.5V5H5.5V7ZM20.5 7H30.5V5H20.5V7ZM40.5 7H45.5V5H40.5V7Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="text-body2 md:font-anton md:text-xl md:text-white/60 lg:text-3xl"
+          >
+            Vận dụng Design Thinking để giải quyết vấn đề
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-3 lg:gap-6 wow animate__animated animate__fadeInUp">
+          <div class="flex flex-col items-center gap-4">
+            <img
+              src="images/icon-dt-empathy.png"
+              alt=""
+              class="size-7 md:size-12 lg:size-25"
+            />
+            <div class="text-caption md:text-4 lg:text-2xl">Empathy</div>
+          </div>
+          <img
+            src="images/icon-dt-arrow.png"
+            alt=""
+            class="size-7 md:size-12 lg:size-25"
+          />
+          <div class="flex flex-col items-center gap-4">
+            <img
+              src="images/icon-dt-define.png"
+              alt=""
+              class="size-7 md:size-12 lg:size-25"
+            />
+            <div class="text-caption md:text-4 lg:text-2xl">Define</div>
+          </div>
+          <img
+            src="images/icon-dt-arrow.png"
+            alt=""
+            class="size-7 md:size-12 lg:size-25"
+          />
+          <div class="flex flex-col items-center gap-4">
+            <img
+              src="images/icon-dt-ideate.png"
+              alt=""
+              class="size-7 md:size-12 lg:size-25"
+            />
+            <div class="text-caption md:text-4 lg:text-2xl">Ideate</div>
+          </div>
+          <img
+            src="images/icon-dt-arrow.png"
+            alt=""
+            class="size-7 md:size-12 lg:size-25"
+          />
+          <div class="flex flex-col items-center gap-4">
+            <img
+              src="images/icon-dt-prototype.png"
+              alt=""
+              class="size-7 md:size-12 lg:size-25"
+            />
+            <div class="text-caption md:text-4 lg:text-2xl">Prototype</div>
+          </div>
+          <img
+            src="images/icon-dt-arrow.png"
+            alt=""
+            class="size-7 md:size-12 lg:size-25"
+          />
+          <div class="flex flex-col items-center gap-4">
+            <img
+              src="images/icon-dt-test.png"
+              alt=""
+              class="size-7 md:size-12 lg:size-25"
+            />
+            <div class="text-caption md:text-4 lg:text-2xl">Test</div>
+          </div>
+        </div>
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-0 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- 1. empathy title -->
+      <div class="flex items-center pt-28 z-10 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">1</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Empathize
+        </div>
+      </div>
+      <!-- empathy map -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Empathy Map<span class="text-secondary-500 text-bold italic">
+              (chị Nhi Trần)</span
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-0 relative wow animate__animated animate__fadeInUp">
+          <div
+            class="flex flex-col gap-4 border-b border-r border-opacity-80 pr-2 pb-2 lg:pr-8 lg:pb-8"
+          >
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Says
+              </div>
+            </div>
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li class="pt-2 lg:pt-4">
+                “Tôi muốn lựa chọn bác sĩ trước khi thăm khám.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Việc đặt lịch trước rất hữu ích nhưng đôi khi thao tác khá phức
+                tạp.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Tôi thường hay quên đi những lịch hẹn đã đặt trước.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Việc đăng ký khám tại quầy bệnh chiếm khá nhiều thời gian của
+                tôi.”
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col items-end gap-4 border-b border-l border-opacity-80 pl-2 pb-2 lg:pl-8 lg:pb-8"
+          >
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Thinks
+              </div>
+            </div>
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li class="pt-2 lg:pt-4">
+                “Liệu bác sĩ mà tôi chọn hẹn khám có năng lực không?”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Có tốn nhiều thời gian để được xác nhận đăng ký lịch hẹn thành
+                công không?”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Hẹn lịch trước trên ứng dụng chắc sẽ giúp tôi đỡ tốn thời gian
+                khi không phải đến bệnh viện sớm.”
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-4 border-t border-r border-opacity-80 pt-2 pr-2 lg:pt-8 lg:pr-8"
+          >
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li class="pt-2 lg:pt-4">
+                “Tôi e ngại rằng mình không đủ thành thạo công nghệ để đăng ký
+                ứng dụng.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Tôi cảm thấy thoải mái khi mình không cần đợi lâu cho đến lượt
+                khám của mình.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Tôi cảm thấy khó chịu vì mình đã từng quên đi nhiều cuộc hẹn
+                trước đó.”
+              </li>
+              <li class="pt-2 lg:pt-4">
+                “Tôi cảm thấy thú vị và hào hứng khi có thể giữ chỗ khám trong
+                những khoảng thời gian trong mong muốn.”
+              </li>
+            </ul>
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Feels
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-end gap-4 border-t border-l border-opacity-80 pl-2 pt-2 lg:pl-8 lg:pt-8"
+          >
+            <ul class="text-body2 lg:text-lg text-white/80 w-full">
+              <li class="pt-2 lg:pt-4">
+                Có thói quen sử dụng Mobile Banking, ví điện tử...
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Thường phải đến bệnh viện để kiểm soát vấn đề tâm lý.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Nghiên cứu kỹ về bệnh viện cũng như bác sĩ sẽ thực hiện tư vấn
+                cho mình.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Thay đổi lịch hẹn nếu có công việc đột xuất và quan trọng.
+              </li>
+            </ul>
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit mt-auto"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Does
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- user persona -->
+      <div class="flex flex-col gap-9 w-full relative z-0 wow animate__animated animate__fadeInUp">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            User Persona
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-6 md:gap-8 lg:gap-10 relative lg:px-24 wow animate__animated animate__fadeInUp"
+        >
+          <div
+            class="flex flex-col justify-center gap-2 md:gap-3 font-inter text-xs lg:text-lg"
+          >
+            <div class="text-white/60">
+              Họ và tên: <span class="text-white">Nguyễn Uyển Nhi</span>
+            </div>
+            <div class="text-white/60">
+              Tuổi: <span class="text-white">34</span>
+            </div>
+            <div class="text-white/60">
+              Nghề nghiệp: <span class="text-white">Nhân viên văn phòng</span>
+            </div>
+            <div class="text-white/60">
+              Nơi ở: <span class="text-white">TP. Hồ Chí Minh</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Hành vi
+              </div>
+            </div>
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li>
+                Thường sử dụng phương thức thanh toán trực tuyến bằng ví điện tử
+                hay Mobile Banking.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Do tính chất công việc tương đối phức tạp nên chị thường đến
+                nhận tư vấn tâm lý, đôi khi chị muốn gặp BS khẩn cấp
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Trong những lần thăm khám trước dây, chị đều đến tại quầy ở bệnh
+                viện để đăng ký
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Pain
+              </div>
+            </div>
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li>
+                Do công việc thường có những phát sinh ngoài giờ nên chị thường
+                phải bỏ về từ bệnh viện (dù đã đăng ký xong tại quầy và đang đợi
+                đến lượt) để hoàn thành công việc.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Trước đây, trong những cuộc hẹn với bạn bè, chị cũng thường rất
+                hay quên giờ hẹn.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Chị khá bận rộn với quỹ thời gian của mình nên chị rất khó chịu
+                khi phải xếp hàng đợi tại bệnh viện.
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div
+              class="flex items-center rounded-5 p-small bg-primary-600 w-fit"
+            >
+              <div
+                class="font-inter font-bold text-sm lg:text-xl text-neutral-950 rounded-5 bg-primary-200 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Gain
+              </div>
+            </div>
+            <ul class="text-body2 lg:text-lg text-white/80">
+              <li>
+                Chị mong muốn có thể tối ưu hóa quy trình đăng ký của bệnh viện
+                để chị có thể tiết kiệm nhiều hơn cho quỹ thời gian của mình.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Chị muốn được chủ động trong việc chọn giờ khám tâm lý.
+              </li>
+              <li class="pt-2 lg:pt-4">
+                Chị cần xem qua hồ sơ của các bác sĩ tại bệnh viện để có thể lựa
+                chọn tốt nhất cho nhu cầu của bản thân.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute top-1/2 right-0 -z-10"
+        ></div>
+      </div>
+      <!-- customer journey map -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Customer Journey Map
+          </div>
+        </div>
+        <img src="images/psycall-cjmap.png" alt="" class="lg:px-24 wow animate__animated animate__fadeInUp" />
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute top-1/2 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- assumption map -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Assumption Map
+          </div>
+        </div>
+        <img src="images/psycall-assumptionmap.png" alt="" class="lg:px-24 wow animate__animated animate__fadeInUp" />
+      </div>
+      <!-- 2. define title -->
+      <div class="flex items-center relative z-0 pt-28 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">2</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Define
+        </div>
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-0 right-86 -z-10"
+        ></div>
+      </div>
+      <!-- problem statement -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-left text-white/50"
+          >
+            Problem Statement
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 items-center wow animate__animated animate__fadeInUp">
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-20 lg:w-32 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                User
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              Nhi sống ở TPHCM, quan tâm nhiều đến sức khỏe tâm lý của bản thân,
+              thăm khám mỗi 2 tháng 1 lần
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-20 lg:w-32 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Need
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              Cần ứng dụng để đăng ký lịch hẹn trước với bác sĩ để chủ động và
+              tiết kiệm thời gian từ lúc đăng ký đến thời điểm bắt đầu cuộc hẹn
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-20 lg:w-32 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Why
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              Rất bận rộn với công việc, không thể dành nhiều thời gian để đứng
+              xếp hàng tại quầy và có khả năng không chọn được bác sĩ mình mong
+              muốn
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- how might we -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-left text-white/50"
+          >
+            How Might We
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 items-center wow animate__animated animate__fadeInUp">
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-24 lg:w-36 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                HMW-1
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              How might we hỗ trợ người dùng theo dõi và quản lý lịch hẹn tâm lý
+              một cách tiện lợi và không bỏ lỡ buổi hẹn?
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-24 lg:w-36 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                HMW-2
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              How might we hỗ trợ cho những người dùng khẩn cấp được tư vấn tâm
+              lý ngay lập tức?
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 md:gap-4 lg:gap-7 md:w-150 lg:w-185"
+          >
+            <div
+              class="flex items-center rounded-lg lg:rounded-5 p-small bg-primary-700/20 w-fit"
+            >
+              <div
+                class="w-24 lg:w-36 text-center font-inter font-bold text-sm lg:text-xl text-white rounded-lg lg:rounded-5 bg-white/5 px-4 py-1 lg:px-8 lg:py-3"
+              >
+                HMW-3
+              </div>
+            </div>
+            <div
+              class="font-inter font-light text-xs md:text-4 leading-150p text-white rounded-lg lg:rounded-5 bg-primary-200/20 px-3 py-1 lg:px-8 lg:py-3"
+            >
+              How might we cung cấp thông tin chi tiết về bác sĩ tâm lý để người
+              dùng có thể chọn bác sĩ phù hợp với nhu cầu của họ?
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3. ideate title -->
+      <div class="flex items-center pt-28 z-10 wow animate__animated animate__fadeInUp"">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">3</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Ideate
+        </div>
+      </div>
+      <!-- disney method -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-left text-white/50"
+          >
+            Disney Method
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-3 lg:gap-6 wow animate__animated animate__fadeInUp">
+          <div class="flex items-center md:max-w-175 xl:max-w-200">
+            <div
+              class="text-lg font-inter text-white font-semibold p-3 md:p-4 bg-white/5 backdrop-blur-xl rounded-lg md:rounded-xl z-10 w-24"
+            >
+              Idea-1
+            </div>
+            <div
+              class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-600 w-fit z-0"
+            >
+              <div
+                class="font-inter font-light text-xs md:text-sm lg:text-lg text-white py-2 pl-12 pr-2 -ml-8 bg-background backdrop-blur-xl rounded-lg md:rounded-xl"
+              >
+                Tạo chế độ đặt lịch khẩn cấp cho những trường hợp cần nhận tư
+                vấn gấp
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5 px-10 md:px-0">
+            <div
+              class="flex flex-col items-center gap-3 p-2 bg-disneymethod-1/10 backdrop-blur-md rounded-lg md:rounded-xl xl:w-96"
+            >
+              <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                VISIONS
+              </div>
+              <ul
+                class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+              >
+                <li>
+                  Thiết kế giao diện đơn giản và dễ sử dụng, với nút “Đặt lịch
+                  khẩn cấp” nổi bật.
+                </li>
+                <li class="mt-1">
+                  Người dùng cần cung cấp lý do và bằng chứng cho tình huống
+                  khẩn cấp, chẳng hạn như thư từ bác sĩ hoặc thông tin về tình
+                  trạng sức khỏe.
+                </li>
+                <li class="mt-1">
+                  Cung cấp danh sách bác sĩ có sẵn để người dùng lựa chọn, dựa
+                  trên chuyên môn và đánh giá từ những người dùng trước.
+                </li>
+                <li class="mt-1">
+                  Cho phép người dùng chọn thời gian gần nhất có thể gặp bác sĩ
+                  mà không cần phải chọn từ lịch có sẵn.
+                </li>
+                <li class="mt-1">
+                  Cung cấp dịch vụ tư vấn khẩn cấp ngoài giờ làm việc thông
+                  thường qua chat hoặc video call.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-2/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  IMPLEMENTATION
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Thực hiện kiểm thử với người dùng để đánh giá tính hiệu quả
+                    của chế độ đặt lịch khẩn cấp và điều chỉnh theo phản hồi.
+                  </li>
+                  <li class="mt-1">
+                    Thiết lập quy trình rõ ràng, đơn giản cho việc đăng ký cuộc
+                    hẹn với bác sĩ tâm lý.
+                  </li>
+                  <li class="mt-1">
+                    Cung cấp dịch vụ hỗ trợ khách hàng để giải đáp thắc mắc và
+                    hướng dẫn người dùng trong quá trình sử dụng dịch vụ.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-3/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  CRITIQUE
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Nếu có quá nhiều cuộc hẹn khẩn cấp, có thể dẫn đến tình
+                    trạng quá tải cho đội ngũ bác sĩ và làm giảm chất lượng dịch
+                    vụ.
+                  </li>
+                  <li class="mt-1">
+                    Có thể xảy ra tình trạng người dùng lạm dụng chế độ đặt lịch
+                    khẩn cấp cho những vấn đề không thực sự cấp bách.
+                  </li>
+                  <li class="mt-1">
+                    Nếu không có sự chuẩn bị đầy đủ cho các cuộc hẹn khẩn cấp,
+                    có thể dẫn đến việc bác sĩ không đáp ứng được yêu cầu của
+                    người dùng.
+                  </li>
+                  <li class="mt-1">
+                    Nếu người dùng không thấy rõ lợi ích của việc sử dụng chế độ
+                    đặt lịch khẩn cấp, họ có thể không sử dụng tính năng này.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-3 lg:gap-6 relative z-0 wow animate__animated animate__fadeInUp">
+          <div class="flex items-center md:max-w-175 xl:max-w-200">
+            <div
+              class="text-lg font-inter text-white font-semibold p-3 md:p-4 bg-white/5 backdrop-blur-xl rounded-lg md:rounded-xl z-10 w-24"
+            >
+              Idea-2
+            </div>
+            <div
+              class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-600 w-fit z-0"
+            >
+              <div
+                class="font-inter font-light text-xs md:text-sm lg:text-lg text-white py-2 pl-12 pr-2 -ml-8 bg-background backdrop-blur-xl rounded-lg md:rounded-xl"
+              >
+                Phát triển tính năng tư vấn trực tuyến, giúp người dùng có thể
+                không mất thời gian di chuyển đến bệnh viện (đặc biệt phù hợp
+                với những bệnh nhân ở xa) và vẫn có thể được nhận tư vấn cùng
+                bác sĩ của bệnh viện
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5 px-10 md:px-0">
+            <div
+              class="flex flex-col items-center gap-3 p-2 bg-disneymethod-1/10 rounded-lg md:rounded-xl xl:w-96"
+            >
+              <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                VISIONS
+              </div>
+              <ul
+                class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+              >
+                <li>
+                  Mọi người ở mọi nơi có thể tiếp cận dịch vụ tư vấn tâm lý chất
+                  lượng của bệnh viện chỉ với một thiết bị kết nối internet.
+                </li>
+                <li class="mt-1">
+                  Tư vấn trực tuyến sẽ khuyến khích nhiều người tìm kiếm sự giúp
+                  đỡ hơn, giảm cảm giác ngại ngùng hoặc xấu hổ khi phải đến trực
+                  tiếp bệnh viện.
+                </li>
+                <li class="mt-1">
+                  Khám chữa bệnh hiệu quả hơn nhờ vào việc loại bỏ các rào cản
+                  địa lý, cho phép bệnh nhân được gặp đúng chuyên gia tâm lý phù
+                  hợp với tình trạng của mình.
+                </li>
+                <li class="mt-1">
+                  Tư vấn trực tuyến giúp giảm tải cho hệ thống bệnh viện, vì các
+                  ca không cần điều trị trực tiếp có thể được xử lý từ xa, cho
+                  phép bác sĩ và cơ sở vật chất tập trung vào các trường hợp
+                  nặng hơn.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-2/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  IMPLEMENTATION
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Phát triển một hệ thống video call bảo mật, chất lượng cao
+                    để đảm bảo người dùng có thể tương tác với bác sĩ một cách
+                    rõ ràng và không bị gián đoạn.
+                  </li>
+                  <li class="mt-1">
+                    Để đảm bảo bảo mật và an toàn cho cả bác sĩ và người dùng,
+                    cần phát triển hệ thống xác minh thông tin bệnh nhân và bác
+                    sĩ trước khi buổi tư vấn diễn ra.
+                  </li>
+                  <li class="mt-1">
+                    Các bác sĩ cũng cần được đào tạo về quy trình tư vấn trực
+                    tuyến để đảm bảo chất lượng tư vấn tương tự như khi gặp trực
+                    tiếp.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-3/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  CRITIQUE
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Tư vấn trực tuyến có thể không thể cung cấp toàn bộ trải
+                    nghiệm như tư vấn trực tiếp, đặc biệt trong những trường hợp
+                    cần quan sát ngôn ngữ cơ thể hoặc tương tác cá nhân sâu hơn.
+                  </li>
+                  <li class="mt-1">
+                    Không phải bệnh nhân nào cũng quen thuộc với công nghệ hoặc
+                    có thể thoải mái khi sử dụng các thiết bị kỹ thuật số để tư
+                    vấn tâm lý.
+                  </li>
+                  <li class="mt-1">
+                    Nếu bệnh nhân không có không gian riêng tư để tham gia tư
+                    vấn trực tuyến, họ có thể cảm thấy không thoải mái hoặc lo
+                    ngại về việc thông tin cá nhân bị lộ.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="size-130 bg-secondary-600 blur-800 absolute -top-1/2 -left-1/2 -z-10"
+          ></div>
+        </div>
+        <div class="flex flex-col items-center gap-3 lg:gap-6 wow animate__animated animate__fadeInUp">
+          <div class="flex items-center md:max-w-175 xl:max-w-200">
+            <div
+              class="text-lg font-inter text-white font-semibold p-3 md:p-4 bg-white/5 backdrop-blur-xl rounded-lg md:rounded-xl z-10 w-24"
+            >
+              Idea-3
+            </div>
+            <div
+              class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-600 w-fit z-0"
+            >
+              <div
+                class="font-inter font-light text-xs md:text-sm lg:text-lg text-white py-2 pl-12 pr-2 -ml-8 bg-background backdrop-blur-xl rounded-lg md:rounded-xl"
+              >
+                Cho phép gửi thông báo nhắc nhở đến khách hàng trước thời gian
+                của buổi hẹn để hạn chế trường hợp khách hàng quên lịch hẹn.
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row gap-5 px-10 md:px-0">
+            <div
+              class="flex flex-col items-center gap-3 p-2 bg-disneymethod-1/10 rounded-lg md:rounded-xl xl:w-96"
+            >
+              <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                VISIONS
+              </div>
+              <ul
+                class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+              >
+                <li>
+                  Gửi thông báo qua nhiều kênh như SMS, email và thông báo trong
+                  ứng dụng.
+                </li>
+                <li class="mt-1">
+                  Cho phép người dùng chọn cách và thời gian họ muốn nhận nhắc
+                  nhở (ví dụ: SMS, email, thông báo ứng dụng) và thiết lập tần
+                  suất ưa thích (ví dụ: 1 ngày trước, 1 giờ trước).
+                </li>
+                <li class="mt-1">
+                  Bao gồm các Call To Action cho người dùng xác nhận, thay đổi
+                  lịch hoặc hủy cuộc hẹn trực tiếp từ thông báo nhắc nhở.
+                </li>
+                <li class="mt-1">
+                  Tạo ra các tin nhắn nhắc nhở cá nhân hóa bao gồm các mẹo liên
+                  quan đến sức khỏe tâm thần, những gợi ý để chuẩn bị cho buổi
+                  thăm khám hiệu quả hơn, đồng thời làm cho việc nhắc nhở trở
+                  nên thú vị hơn.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-2/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  IMPLEMENTATION
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Xây dựng tính năng cài đặt trong ứng dụng để người dùng chọn
+                    cách họ muốn nhận nhắc nhở (thông báo đẩy, SMS, email) và
+                    cài đặt thời gian yêu thích.
+                  </li>
+                  <li class="mt-1">
+                    Tiến hành A/B testing với các loại và thời gian nhắc nhở
+                    khác nhau để xác định phương thức phù hợp với từng phân khúc
+                    khách hàng.
+                  </li>
+                  <li class="mt-1">
+                    Thiết lập hệ thống phản hồi nơi người dùng có thể đánh giá
+                    tính hiệu quả của thông báo và đề xuất cải tiến.
+                  </li>
+                  <li class="mt-1">
+                    Sử dụng phần mềm đặt lịch hẹn với API (Firebase...) để gửi
+                    SMS, email, hoặc thông báo đẩy.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+              <div
+                class="flex flex-col items-center gap-3 p-2 bg-disneymethod-3/10 rounded-lg md:rounded-xl xl:w-96"
+              >
+                <div class="font-inter text-lg lg:text-xl font-bold text-white">
+                  CRITIQUE
+                </div>
+                <ul
+                  class="list-disc font-inter text-white/80 font-light text-xs lg:text-lg pl-4"
+                >
+                  <li>
+                    Người dùng có thể cảm thấy phiền nếu nhận quá nhiều thông
+                    báo, dẫn đến việc họ tắt tính năng này.
+                  </li>
+                  <li class="mt-1">
+                    Gửi nhắc nhở quá sớm có thể khiến người dùng quên; quá muộn
+                    có thể không đủ thời gian để chuẩn bị.
+                  </li>
+                  <li class="mt-1">
+                    Nếu thông báo không được thiết kế hấp dẫn hoặc không chứa
+                    thông tin hữu ích, khách hàng có thể không cảm thấy cần
+                    thiết phải chú ý đến chúng.
+                  </li>
+                  <li class="mt-1">
+                    Một số khách hàng có thể không quen với việc nhận thông báo
+                    qua ứng dụng hoặc email, dẫn đến việc họ không chú ý và bỏ
+                    qua thông báo.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- weighted scoring model -->
+      <div class="flex flex-col gap-9 w-full z-10">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Weighted Scoring Model
+          </div>
+        </div>
+        <img src="images/psycall-weightedscore.png" alt="" class="lg:px-24 wow animate__animated animate__fadeInUp" />
+      </div>
+      <!-- 4. prototype title -->
+      <div class="flex items-center pt-28 z-10 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">4</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Protoype
+        </div>
+      </div>
+      <!-- user flow -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            User Flow
+          </div>
+        </div>
+        <img src="images/psycall-usflow.png" alt="" class="lg:px-24 wow animate__animated animate__fadeInUp" />
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute -top-1/3 left-72 -z-10"
+        ></div>
+      </div>
+      <!-- low-fidelity prototype -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Low-fidelity Prototype
+          </div>
+        </div>
+        <img
+          src="images/psycall-lofiprototype.png"
+          alt=""
+          class="scale-110 -mt-12 wow animate__animated animate__fadeInUp"
+        />
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute top-1/2 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- ui kit -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            UI Kits
+          </div>
+        </div>
+        <img src="images/psycall-uikit.png" alt="" class="lg:px-24 wow animate__animated animate__fadeInUp" />
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-175 right-48 -z-10"
+        ></div>
+      </div>
+      <!-- 5. test title -->
+      <div class="flex items-center pt-28 z-10 wow animate__animated animate__fadeInUp"">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">4</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Test
+        </div>
+      </div>
+      <!-- usability plan testing -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Usability Plan Testing
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 lg:px-28">
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              1. Giới thiệu
+            </div>
+          </div>
+          <ul
+            class="list-disc text-xs lg:text-lg font-inter text-white font-bold px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <li>
+              Tiêu đề:
+              <span class="font-light"
+                >ĐẶT LỊCH HẸN TƯ VẤN TÂM LÝ KHẨN CẤP</span
+              >
+            </li>
+            <li class="mt-1">
+              Tác giả:
+              <span class="font-light">Trần Ngọc Hoài, UI/UX Designer</span>
+            </li>
+            <li class="mt-1">
+              Stakeholders:
+              <span class="font-light"
+                >Người dùng ứng dụng (khách hàng), Đội ngũ hỗ trợ khách hàng,
+                Bác sĩ tâm lý, Ban quản lý</span
+              >
+            </li>
+            <li>Ngày: <span class="font-light">01/11/2024</span></li>
+            <li class="mt-1">
+              Bối cảnh nghiên cứu:
+              <span class="font-light"
+                >Dự án này tập trung vào phát triển tính năng đặt lịch hẹn tư
+                vấn tâm lý khẩn cấp trên ứng dụng. Tính năng nhằm hỗ trợ người
+                dùng khi cần gặp gấp bác sĩ tâm lý.
+              </span>
+            </li>
+            <li class="mt-1">
+              Mục tiêu nghiên cứu:
+              <span class="font-light"
+                >Xác định và hiểu rõ những khó khăn mà người dùng gặp phải khi
+                đặt lịch hẹn khẩn cấp, từ đó cải thiện trải nghiệm người dùng và
+                tăng cường khả năng tiếp cận.</span
+              >
+            </li>
+          </ul>
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit mt-2 wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              2. Câu hỏi nghiên cứu
+            </div>
+          </div>
+          <ul
+            class="list-disc text-xs lg:text-lg font-inter text-white font-light px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <li>
+              Quy trình đăng ký có trực quan và dễ thực hiện, ngay cả khi người
+              dùng đang trong trạng thái căng thẳng không?
+            </li>
+            <li class="mt-1">
+              Người dùng có thể dễ dàng tìm và hoàn tất quy trình đặt lịch khẩn
+              cấp không?
+            </li>
+            <li class="mt-1">
+              Tính năng này có đáp ứng được nhu cầu cụ thể của người dùng cần hỗ
+              trợ tâm lý khẩn cấp không?
+            </li>
+            <li class="mt-1">
+              Có các tính năng bổ sung nào được người dùng đề xuất để quy trình
+              trở nên mượt mà hơn không?
+            </li>
+          </ul>
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit mt-2 wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              3. Chỉ số đánh giá hiệu quả (KPIs)
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 text-xs lg:text-lg font-inter text-white font-light px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <ul class="list-disc">
+              <li>Thời gian hoàn thành</li>
+              <li class="mt-1">Tỷ lệ hoàn thành</li>
+            </ul>
+            <ul class="list-disc">
+              <li>Tỷ lệ lỗi</li>
+              <li class="mt-1">Hệ số đánh giá tính khả dụng (SUS)</li>
+            </ul>
+          </div>
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit mt-2 wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              4. Phương pháp
+            </div>
+          </div>
+          <ul
+            class="list-disc text-xs lg:text-lg font-inter text-white font-bold px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <li>
+              Loại nghiên cứu:
+              <span class="font-light">Moderated usability study</span>
+            </li>
+            <li class="mt-1">
+              Địa điểm:
+              <span class="font-light">Thử nghiệm trực tuyến (Maze.co)</span>
+            </li>
+            <li class="mt-1">
+              Ngày:
+              <span class="font-light">01/11/2024</span>
+            </li>
+            <li>
+              Người tham gia:
+              <span class="font-light"
+                >5-8 người có nhu cầu hoặc từng có nhu cầu tư vấn tâm lý khẩn
+                cấp, bao gồm một số người có khả năng trải nghiệm căng
+                thẳng.</span
+              >
+            </li>
+            <li class="mt-1">
+              Thời lượng mỗi phần:
+              <span class="font-light">15-20 phút/mỗi người tham gia </span>
+            </li>
+          </ul>
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit mt-2 wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              5. Đối tượng tham gia
+            </div>
+          </div>
+          <ul
+            class="list-disc text-xs lg:text-lg font-inter text-white font-bold px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <li>
+              Độ tuổi:
+              <span class="font-light"
+                >Người dùng từ 18-45 tuổi có nhu cầu tư vấn tâm lý.</span
+              >
+            </li>
+            <li class="mt-1">
+              Mức độ đa dạng:
+              <span class="font-light"
+                >Bao gồm những người có mức độ thành thạo khác nhau khi sử dụng
+                ứng dụngdi động và người đã từng/chưa từng có ý định đặt lịch
+                hẹn tư vấn tâm lý khẩn cấp.</span
+              >
+            </li>
+            <li class="mt-1">
+              Khuyến khích:
+              <span class="font-light"
+                >Cung cấp voucher hoặc phần thưởng nhỏ sau khi hoàn thành bài
+                kiểm tra và bảng câu hỏi.
+              </span>
+            </li>
+          </ul>
+          <div
+            class="flex items-center rounded-lg md:rounded-xl p-xs bg-primary-400 w-fit mt-2 wow animate__animated animate__fadeInUp"
+          >
+            <div
+              class="font-inter font-light text-xs md:text-sm lg:text-lg text-white px-4 py-3 bg-primary-950 rounded-lg md:rounded-xl"
+            >
+              6. Kịch bản
+            </div>
+          </div>
+          <ul
+            class="list-disc text-xs lg:text-lg font-inter text-white font-bold px-6 py-2 lg:px-14 lg:py-5 bg-white/10 rounded-lg md:rounded-xl wow animate__animated animate__fadeInUp"
+          >
+            <li>
+              Yêu cầu 1:
+              <span class="font-light"
+                >Trên màn hình chính của ứng dụng, hãy tìm và chọn tính năng đặt
+                lịch hẹn khẩn cấp.</span
+              >
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              Câu hỏi bổ sung: Bạn thấy bước này dễ hay khó? Bạn muốn thay đổi
+              điều gì không?
+            </li>
+            <li class="mt-1">
+              Yêu cầu 2:
+              <span class="font-light"
+                >Sau khi chọn tính năng đặt lịch khẩn cấp, thao tác tiếp tục cho
+                đến khi bạn chọn thời gian gần nhất cho buổi hẹn.</span
+              >
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              Câu hỏi bổ sung: Bạn thấy bước này dễ hay khó? Bạn có gặp khó khăn
+              gì không? Yêu cầu 3: Thanh toán và hoàn tất quy trình đặt lịch.
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              Câu hỏi bổ sung: Bước này dễ hay khó? Có gì khiến bạn thấy bối rối
+              không?
+            </li>
+            <li class="mt-1">
+              Yêu cầu 4:
+              <span class="font-light"
+                >Hãy tưởng tượng bạn đang căng thẳng và cần đặt lịch nhanh nhất
+                có thể. Hãy thực hiện lại quy trình đặt lịch và miêu tả trải
+                nghiệm của bạn.
+              </span>
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              Câu hỏi bổ sung: Bạn thấy việc đặt lịch khi đang căng thẳng dễ hay
+              khó? Có gì khiến quá trình trở nên khó khăn hơn không?
+            </li>
+            <li class="mt-1">
+              Bảng câu hỏi sau khi hoàn tất:
+              <span class="font-light"
+                >Yêu cầu người tham gia hoàn thành Hệ số đánh giá tính khả dụng
+                (SUS) với các đánh giá sau:
+              </span>
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              "Tôi cảm thấy ứng dụng dễ sử dụng."
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              "Quy trình đặt lịch khẩn cấp trực quan và nhanh chóng."
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              "Tôi cảm thấy tự tin rằng có thể đặt lịch hẹn trong tình huống
+              khẩn cấp."
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              "Ứng dụng cung cấp thông tin rõ ràng về cách hoàn tất đặt lịch."
+            </li>
+            <li class="mt-1 ml-9 font-light">
+              "Tôi sẽ sử dụng tính năng này thường xuyên trong các tình huống
+              khẩn cấp."
+            </li>
+          </ul>
+        </div>
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-320 right-0 -z-10"
+        ></div>
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute top-0 -left-20 -z-10"
+        ></div>
+      </div>
+      <!-- hifi prototype -->
+      <div class="flex flex-col gap-9 w-full relative z-0">
+        <div class="flex items-center justify-start gap-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="91"
+            height="11"
+            viewBox="0 0 91 11"
+            fill="none"
+          >
+            <path
+              d="M0.166667 5.5C0.166667 8.44552 2.55448 10.8333 5.5 10.8333C8.44552 10.8333 10.8333 8.44552 10.8333 5.5C10.8333 2.55448 8.44552 0.166667 5.5 0.166667C2.55448 0.166667 0.166667 2.55448 0.166667 5.5ZM5.5 6.5H8.53571V4.5H5.5V6.5ZM14.6071 6.5H20.6786V4.5H14.6071V6.5ZM26.75 6.5H32.8214V4.5H26.75V6.5ZM38.8929 6.5H44.9643V4.5H38.8929V6.5ZM51.0357 6.5H57.1071V4.5H51.0357V6.5ZM63.1786 6.5H69.25V4.5H63.1786V6.5ZM75.3214 6.5H81.3929V4.5H75.3214V6.5ZM87.4643 6.5H90.5V4.5H87.4643V6.5Z"
+              fill="#3E91FF"
+            />
+          </svg>
+          <div
+            class="font-inter text-body1 md:text-xl lg:text-2xl text-white/50"
+          >
+            Hi-fidelity prototype
+          </div>
+        </div>
+        <img src="images/psycall-hifiprototype.png" alt="" class="wow animate__animated animate__fadeInUp" />
+        <img src="images/psycall-amoc.png" alt="" class="object-cover wow animate__animated animate__fadeInUp" />
+        <div
+          class="size-130 bg-primary-600 blur-800 absolute top-1/2 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- contact section -->
+      <div class="flex flex-col gap-6 md:items-center pt-15 relative z-0 wow animate__animated animate__fadeInUp">
+        <div class="text-h3 xl:text-16 text-white/30 md:text-center w-full">
+          Let's
+          <span
+            class="font-anton text-h3 xl:text-16 font-normal leading-120p text-white/80"
+            >Get in touch</span
+          >
+        </div>
+        <div
+          class="text-body1 md:text-center lg:text-lg lg:text-white/80 w-full md:w-120 lg:w-185 pt-4"
+        >
+          I’m always excited to connect and collaborate! Whether you have a
+          project idea, feedback on my work, or an opportunity to discuss, feel
+          free to reach out.
+        </div>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-7 justify-center">
+          <div class="flex gap-4 items-center">
+            <img src="images/icon-phone.png" alt="" />
+            <div class="text-body1 hover:text-white">(+84) 397 617 144</div>
+          </div>
+          <a href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION" class="flex gap-4 items-center">
+            <img src="images/icon-mail.png" alt="" />
+            <div class="text-body1 hover:text-white">hoaingoc.creative@gmail.com</div>
+          </a>
+        </div>
+        <!-- <div class="flex gap-2 justify-center items-center pt-9">
+          <img src="images/icon-Instagram.png" alt="" /><img
+            src="images/icon-Linkedin.png"
+            alt=""
+          /><img src="images/icon-behance.png" alt="" />
+        </div> -->
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-12 -left-44 -z-10"
+        ></div>
+      </div>
+      <!-- footer -->
+      <div class="w-full flex flex-col gap-5">
+        <div class="w-full h-xs bg-white/15"></div>
+        <div class="w-full flex justify-between items-center">
+          <div class="text-body2 italic">Henry</div>
+          <div class="text-body2 italic">2025</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

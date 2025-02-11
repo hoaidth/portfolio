@@ -1,0 +1,495 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etour | Henry</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="portfolio.js">
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    #cursor {
+      transition: all 20ms linear;
+    }
+  </style>
+  <body onmousemove="moveCursor(event)">
+    <div
+      id="cursor"
+      class="size-40 bg-primary-700 blur-3xl rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+    ></div>
+    <div
+      class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col gap-12 lg:gap-15"
+    >
+      <!-- navigation bar -->
+      <div class="flex justify-between items-center py-3 w-full">
+        <!-- personal logo -->
+        <a href="index.html" class="z-0">
+          <img src="images/logo.png" alt=""/>
+        </a>
+        
+        <!-- menu -->
+        <div
+          id="desktopMenu"
+          class="flex gap-8 items-baseline ml-auto hidden sm:flex z-0"
+        >
+          <a href="work.html" class="text-button2 lg:text-button1">Work</a>
+          <a href="about.html" class="text-button2 lg:text-button1">About</a>
+          <!-- button -->
+          <div
+            class="flex items-center rounded-5 p-small bg-gradient-to-r from-secondary-700 to-primary-700 hover:shadow-buttonhover"
+          >
+            <a
+              href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION"
+              class="text-button2 lg:text-button1 rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+        <img
+          src="images/icon-menu.png"
+          alt=""
+          class="sm:hidden size-10"
+          onclick="toggleMenu()"
+        />
+        <div
+          id="mobileMenu"
+          class="fixed top-0 right-0 h-screen w-screen flex flex-col gap-3 bg-background/80 backdrop-blur-md px-5 pt-3 hidden z-20"
+        >
+          <div class="flex justify-between items-center">
+            <img src="images/logo.png" alt="" />
+            <img
+              src="images/icon-x.png"
+              alt=""
+              class="size-10"
+              onclick="toggleMenu()"
+            />
+          </div>
+          <a href="index.html" class="flex justify-between items-center pt-7">
+            <div class="font-inter text-2xl text-white/80">Home</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="work.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter text-2xl text-white/80">Work</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="about.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter text-2xl text-white/80">About</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a
+            href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION"
+            class="flex justify-between items-center pt-6"
+          >
+            <div class="font-inter text-2xl text-white/80">Contact</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div
+            class="absolute top-40 -left-12 h-96 w-66 bg-secondary-600 blur-250"
+          ></div>
+          <div class="w-full h-xxs bg-white/60"></div>
+        </div>
+      </div>
+      <!-- intro section -->
+      <div class="flex items-center justify-center relative pt-4 lg:pt-40 z-0">
+        <img
+          src="images/etour-mockbg.png"
+          alt=""
+          class="rounded-5 h-90 lg:w-full lg:h-130 object-cover wow animate__animated animate__fadeInUpBig"
+        />
+        <div
+          class="absolute left-4 bottom-4 lg:left-16 lg:bottom-16 flex flex-col gap-1 md:gap-2 lg:gap-3 w-68 lg:w-120 wow animate__animated animate__fadeInUp"
+        >
+          <div class="font-anton text-4xl lg:text-6xl text-white">
+            E-<span class="text-primary-700">tour</span>
+          </div>
+          <div
+            class="text-xs lg:text-lg font-inter text-white font-light leading-170p"
+          >
+            Để đơn giản hóa việc lập kế hoạch và đặt chỗ du lịch, cho phép người
+            dùng khám phá điểm đến, tùy chỉnh hành trình và đặt tour một cách dễ
+            dàng.
+          </div>
+        </div>
+        <img
+          src="images/etour-mocintro.png"
+          alt=""
+          class="absolute -top-6 md:-top-16 left-1/2 transform -translate-x-1/2 w-96 md:w-120 lg:w-200 xl:w-210 object-cover wow animate__animated animate__zoomIn"
+        />
+        <div
+          class="size-130 rounded-full bg-primary-600 blur-800 absolute top-36 right-56 -z-10"
+        ></div>
+      </div>
+      <!-- tổng quan  -->
+      <div
+        class="flex flex-col md:flex-row items-center justify-between w-full lg:px-24 z-0"
+      >
+        <div class="flex items-center">
+          <div class="font-anton text-16 text-primary-300 lg:text-8xl">1</div>
+          <div
+            class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+          >
+            Tổng quan dự án
+          </div>
+        </div>
+        <div
+          class="text-xs lg:text-lg font-inter text-white/90 font-light leading-170p md:w-96 lg:w-150 wow animate__animated animate__fadeInUp"
+        >
+          eTour là một nền tảng giúp đơn giản hóa việc lập kế hoạch và đặt chỗ
+          du lịch. Người dùng có thể khám phá điểm đến, tùy chỉnh hành trình
+          theo sở thích và đặt tour một cách dễ dàng. Hệ thống tích hợp các dịch
+          vụ du lịch, cung cấp gợi ý thông minh và trải nghiệm cá nhân hóa. Mục
+          tiêu của eTour là mang đến giải pháp du lịch tiện lợi, tiết kiệm thời
+          gian và tối ưu hóa trải nghiệm cho khách hàng.
+        </div>
+      </div>
+      <!-- mục tiêu title-->
+      <div class="flex justify-center items-center md:pt-12 lg:pt-28 z-0">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">2</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Mục tiêu
+        </div>
+      </div>
+      <!-- mục tiêu -->
+      <div
+        class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-10 lg:gap-24 px-8 md:px-4 lg:px-32 relative z-0"
+      >
+        <div class="flex flex-col gap-2 wow animate__animated animate__fadeInUp">
+          <div
+            class="text-2xl md:text-3xl lg:text-4xl font-anton text-white/80 hover:text-white"
+          >
+            #1
+          </div>
+          <div class="text-xs md:text-lg font-inter font-bold text-white/80 hover:text-white">
+            Tối ưu hóa trải nghiệm du lịch
+          </div>
+          <div class="text-xs md:text-lg font-inter text-white/80">
+            Giúp người dùng dễ dàng tìm kiếm và đặt tour du lịch phù hợp với nhu
+            cầu, tiết kiệm thời gian và công sức.
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 wow animate__animated animate__fadeInUp">
+          <div
+            class="text-2xl md:text-3xl lg:text-4xl font-anton text-white/80 hover:text-white"
+          >
+            #2
+          </div>
+          <div class="text-xs md:text-lg font-inter font-bold text-white/80 hover:text-white">
+            Tăng cường khả năng tiếp cận thông tin du lịch
+          </div>
+          <div class="text-xs md:text-lg font-inter text-white/80">
+            Cung cấp thông tin chi tiết về các tour du lịch, địa điểm, đánh giá,
+            và gợi ý cá nhân hóa trên một nền tảng duy nhất.
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 wow animate__animated animate__fadeInUp">
+          <div
+            class="text-2xl md:text-3xl lg:text-4xl font-anton text-white/80 hover:text-white"
+          >
+            #3
+          </div>
+          <div class="text-xs md:text-lg font-inter font-bold text-white/80 hover:text-white">
+            Hỗ trợ ngành du lịch
+          </div>
+          <div class="text-xs md:text-lg font-inter text-white/80">
+            Tạo cầu nối giữa các nhà cung cấp dịch vụ du lịch và khách hàng, góp
+            phần thúc đẩy ngành du lịch phát triển.
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 wow animate__animated animate__fadeInUp">
+          <div
+            class="text-2xl md:text-3xl lg:text-4xl font-anton text-white/80 hover:text-white"
+          >
+            #4
+          </div>
+          <div class="text-xs md:text-lg font-inter font-bold text-white/80 hover:text-white">
+            Tăng tính bền vững trong du lịch
+          </div>
+          <div class="text-xs md:text-lg font-inter text-white/80">
+            Giới thiệu các tour du lịch thân thiện với môi trường và hỗ trợ cộng
+            đồng địa phương.
+          </div>
+        </div>
+        <div
+          class="size-130 rounded-full bg-secondary-800 blur-800 absolute top-1/2 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- user persona title -->
+      <div class="flex justify-center items-center md:pt-12 lg:pt-28 z-0">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">3</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          User Persona
+        </div>
+      </div>
+      <!-- user persona -->
+      <div class="flex flex-col md:flex-row gap-4 md:gap-6 z-0">
+        <div class="flex flex-col lg:justify-between gap-5">
+          <div class="flex items-center gap-6 lg:gap-10 wow animate__animated animate__fadeInLeft">
+            <img
+              src="images/etour-vtva.png"
+              alt=""
+              class="w-36 lg:w-52 object-cover rounded-full"
+            />
+            <div class="flex flex-col gap-2 lg:gap-5">
+              <div
+                class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+              >
+                Võ Thị Vân Anh
+              </div>
+              <ul class="list-disc font-inter text-xs lg:text-lg text-white">
+                <li>Nữ</li>
+                <li>24 tuổi</li>
+                <li>Nhân viên văn phòng</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 lg:gap-5 wow animate__animated animate__fadeInLeft">
+            <div
+              class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+            >
+              Bio
+            </div>
+            <div
+              class="font-inter text-xs lg:text-lg text-white/90 leading-150p"
+            >
+              Van Anh là một nhân viên văn phòng yêu thích du lịch nhưng bận rộn
+              với công việc, không có nhiều thời gian để tìm kiếm và sắp xếp
+              lịch trình. Cô mong muốn có một nền tảng giúp khám phá điểm đến,
+              lập kế hoạch chuyến đi dễ dàng và đặt tour một cách nhanh chóng,
+              tiện lợi.
+            </div>
+          </div>
+          <div class="flex flex-col gap-1 wow animate__animated animate__fadeInLeft">
+            <div
+              class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+            >
+              Kỹ năng
+            </div>
+            <div class="font-inter text-xs lg:text-lg text-white pt-1 md:pt-4">
+              Sử dụng công nghệ
+            </div>
+            <div class="flex w-68 lg:w-130 h-4 rounded-5 bg-white/40">
+              <div class="w-2/3 bg-secondary-600 rounded-5"></div>
+            </div>
+            <div class="font-inter text-xs lg:text-lg text-white pt-1 md:pt-4">
+              Kiến thức du lịch
+            </div>
+            <div class="flex w-68 lg:w-130 h-4 rounded-5 bg-white/40">
+              <div class="w-1/3 bg-secondary-600 rounded-5"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 md:justify-between">
+          <div
+            class="flex flex-col gap-2 lg:gap-5 p-4 lg:p-6 bg-gradient-to-br from-white/20 to-white/5 bg-opacity-30 rounded-xl wow animate__animated animate__fadeInRight"
+          >
+            <div
+              class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+            >
+              Needs
+            </div>
+            <ul
+              class="list-disc font-inter text-xs lg:text-lg text-white/90 pl-10"
+            >
+              <li>
+                Tìm kiếm thông tin về điểm đến, tour du lịch một cách dễ dàng
+              </li>
+              <li class="pt-1">
+                Công cụ giúp tùy chỉnh và tối ưu lịch trình theo sở thích cá
+                nhân
+              </li>
+              <li class="pt-1">
+                Đặt chỗ nhanh chóng, có đánh giá và gợi ý từ người dùng khác
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-2 lg:gap-5 p-4 lg:p-6 bg-gradient-to-br from-white/20 to-white/5 bg-opacity-30 rounded-xl wow animate__animated animate__fadeInRight"
+          >
+            <div
+              class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+            >
+              Pains
+            </div>
+            <ul
+              class="list-disc font-inter text-xs lg:text-lg text-white/90 pl-10"
+            >
+              <li>
+                Khó khăn trong việc tìm kiếm thông tin đầy đủ, đáng tin cậy về
+                điểm đến
+              </li>
+              <li class="pt-1">
+                Không có công cụ hỗ trợ sắp xếp lịch trình hợp lý
+              </li>
+              <li class="pt-1">
+                Quá nhiều lựa chọn khiến việc ra quyết định trở nên khó khăn
+              </li>
+              <li class="pt-1">
+                Một số nền tảng đặt tour chưa hỗ trợ tốt dịch vụ khách hàng
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col gap-2 lg:gap-5 p-4 lg:p-6 bg-gradient-to-br from-white/20 to-white/5 bg-opacity-30 rounded-xl w-96 lg:w-190 wow animate__animated animate__fadeInRight"
+          >
+            <div
+              class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
+            >
+              Goals
+            </div>
+            <ul
+              class="list-disc font-inter text-xs lg:text-lg text-white/90 pl-10"
+            >
+              <li>Lên kế hoạch du lịch nhanh chóng và hiệu quả</li>
+              <li class="pt-1">
+                Trải nghiệm hành trình thuận tiện, không gặp trở ngại khi di
+                chuyển
+              </li>
+              <li class="pt-1">
+                Tìm kiếm tour phù hợp với ngân sách và sở thích
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- sitemap title -->
+      <div class="flex justify-center items-center md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">4</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Sitemap
+        </div>
+      </div>
+      <!-- sitemap -->
+      <img src="images/etour-sitemap.png" alt="" class="lg:px-16 z-0 wow animate__animated animate__fadeInUp" />
+      <!-- wireframe title -->
+      <div class="flex justify-center items-center md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">5</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Wireframe
+        </div>
+      </div>
+      <!-- wireframe -->
+      <div class="relative z-0 wow animate__animated animate__fadeInUp">
+        <img src="images/etour-wireframe.png" alt="" />
+        <div
+          class="size-130 rounded-full bg-primary-600 blur-800 absolute right-0 -bottom-20 -z-10"
+        ></div>
+      </div>
+      <!-- style guide title -->
+      <div class="flex justify-center items-center md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp">
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">6</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Style Guide
+        </div>
+      </div>
+      <!-- style guide -->
+      <div class="relative z-0 wow animate__animated animate__fadeInUp">
+        <img src="images/etour-styleguide.png" alt="" />
+        <div
+          class="size-130 rounded-full bg-primary-600 blur-800 absolute top-1/2 left-0 -z-10"
+        ></div>
+      </div>
+      <!-- visual design title -->
+      <div
+        class="flex justify-center items-center md:pt-12 lg:pt-28 relative z-0 wow animate__animated animate__fadeInUp"
+      >
+        <div class="font-anton text-16 text-primary-300 lg:text-8xl">7</div>
+        <div
+          class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
+        >
+          Visual Design
+        </div>
+        <div
+          class="size-130 rounded-full bg-secondary-600 blur-800 absolute top-2/3 left-1/2 transform -translate-x-1/2 -z-10"
+        ></div>
+      </div>
+      <!-- visual design -->
+      <div class="flex flex-col z-10 wow animate__animated animate__fadeInUp">
+        <img src="images/etour-visualdes.png" alt="" />
+        <img src="images/etour-amoc.png" alt="" />
+      </div>
+      <!-- contact section -->
+      <div class="flex flex-col gap-6 md:items-center pt-15 relative z-0 wow animate__animated animate__fadeInUp">
+        <div class="text-h3 xl:text-16 text-white/30 md:text-center w-full">
+          Let's
+          <span
+            class="font-anton text-h3 xl:text-16 font-normal leading-120p text-white/80"
+            >Get in touch</span
+          >
+        </div>
+        <div
+          class="text-body1 md:text-center lg:text-lg lg:text-white/80 w-full md:w-120 lg:w-185 pt-4"
+        >
+          I’m always excited to connect and collaborate! Whether you have a
+          project idea, feedback on my work, or an opportunity to discuss, feel
+          free to reach out.
+        </div>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-7 justify-center">
+          <div class="flex gap-4 items-center">
+            <img src="images/icon-phone.png" alt="" />
+            <div class="text-body1 hover:text-white">(+84) 397 617 144</div>
+          </div>
+          <a href="mailto:hoaingoc.creative@gmail.com?subject=FOR DISCUSSION" class="flex gap-4 items-center">
+            <img src="images/icon-mail.png" alt="" />
+            <div class="text-body1 hover:text-white">hoaingoc.creative@gmail.com</div>
+          </a>
+        </div>
+        <!-- <div class="flex gap-2 justify-center items-center pt-9">
+          <img src="images/icon-Instagram.png" alt="" /><img
+            src="images/icon-Linkedin.png"
+            alt=""
+          /><img src="images/icon-behance.png" alt="" />
+        </div> -->
+        <div
+          class="size-130 bg-secondary-600 blur-800 absolute top-12 -left-44 -z-10"
+        ></div>
+      </div>
+      <!-- footer -->
+      <div class="w-full flex flex-col gap-5">
+        <div class="w-full h-xs bg-white/15"></div>
+        <div class="w-full flex justify-between items-center">
+          <div class="text-body2 italic">Henry</div>
+          <div class="text-body2 italic">2025</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
