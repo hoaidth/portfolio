@@ -24,52 +24,84 @@
   <body onmousemove="moveCursor(event)">
     <div
       id="cursor"
-      class="size-40 bg-primary-700 blur-3xl rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+      class="size-40 bg-primary-700 blur-100 rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
     ></div>
     <div
       class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col items-center gap-12 lg:gap-15"
     >
       <!-- navigation bar -->
-      <div class="flex justify-between items-center py-3 w-full">
+      <div class="flex justify-between items-center py-3 w-full relative z-10">
         <!-- personal logo -->
         <a href="index.html" class="z-0">
-          <img src="images/logo.svg" alt=""/>
+          <img src="images/logo.svg" alt="" class="hover:animate-pulse"/>
         </a>
         <!-- menu -->
         <div
           id="desktopMenu"
           class="flex gap-8 items-baseline ml-auto hidden sm:flex z-0"
         >
-          <a href="work.html" class="text-button2 lg:text-button1">Work</a>
-          <a href="about.html" class="text-button2 lg:text-button1">About</a>
+          <a href="work.html" class="font-inter text-white/80 text-sm lg:text-xl hover:text-white">Work</a>
+          <a href="about.html" class="font-inter text-white/80 text-sm lg:text-xl hover:text-white">About</a>
           <!-- button -->
           <div
             class="flex items-center rounded-5 p-small bg-gradient-to-r from-secondary-700 to-primary-700 hover:shadow-buttonhover"
           >
             <a
               href="mailto:hoaingoc.creative@gmail.com?subject=[VIA WEBSITE]"
-              class="text-button2 lg:text-button1 rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
+              class="font-inter text-white/80 text-sm lg:text-xl hover:text-white rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
             >
               Contact
             </a>
           </div>
         </div>
-        <svg class="sm:hidden" onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-          <path d="M4.5 16.5H28.5M4.5 8.5H28.5M4.5 24.5H28.5" stroke="#F6F6F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        
-        
+        <svg
+          class="sm:hidden"
+          onclick="toggleMenu()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="33"
+          height="33"
+          viewBox="0 0 33 33"
+          fill="none"
+        >
+          <path
+            d="M4.5 16.5H28.5M4.5 8.5H28.5M4.5 24.5H28.5"
+            stroke="#F6F6F6"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
         <div
           id="mobileMenu"
           class="fixed top-0 right-0 h-screen w-screen flex flex-col gap-3 bg-background/80 backdrop-blur-md px-5 pt-2 hidden z-20"
         >
           <div class="flex justify-between items-center">
             <img src="images/logo.svg" alt="" />
-            <svg class="z-10" onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
-              <path d="M30 10.5L10 30.5" stroke="#B100CF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 10.5L30 30.5" stroke="#B100CF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            
+            <svg
+              class="z-10"
+              onclick="toggleMenu()"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="41"
+              viewBox="0 0 40 41"
+              fill="none"
+            >
+              <path
+                d="M30 10.5L10 30.5"
+                stroke="#B100CF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 10.5L30 30.5"
+                stroke="#B100CF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
           <a href="index.html" class="flex justify-between items-center pt-7">
             <div class="font-inter font-light text-2xl text-white">Home</div>
@@ -190,7 +222,7 @@
         </div>
       </div>
       <!-- design thinking process -->
-      <div class="flex flex-col gap-8 relative z-0">
+      <div class="flex flex-col gap-8 relative z-0 w-full">
         <div class="flex items-center justify-center gap-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +242,7 @@
             Vận dụng Design Thinking để giải quyết vấn đề
           </div>
         </div>
-        <div class="flex items-center justify-center gap-3 lg:gap-6 wow animate__animated animate__fadeInUp">
+        <div class="flex items-center justify-between w-full lg:justify-center lg:gap-3 lg:gap-6 wow animate__animated animate__fadeInUp">
           <div class="flex flex-col items-center gap-4">
             <img
               src="images/icon-dt-empathy.png"
