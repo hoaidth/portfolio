@@ -30,7 +30,7 @@
       class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col gap-12 lg:gap-15"
     >
       <!-- navigation bar -->
-      <div class="flex justify-between items-center py-3 w-full">
+      <div class="flex justify-between items-center py-3 w-full relative z-10">
         <!-- personal logo -->
         <a href="index.html" class="z-0">
           <img src="images/logo.svg" alt=""/>
@@ -116,7 +116,10 @@
         </div>
       </div>
       <!-- intro section -->
-      <div class="flex items-center justify-center relative pt-4 lg:pt-40 z-0">
+      <div class="flex flex-col items-center justify-center relative lg:-mt-10 z-0">
+        <div class="font-anton text-6xl md:text-26 lg:text-35 xl:text-65 bg-gradient-to-b from-white via-white/70  to-white/0 text-transparent bg-clip-text opacity-30 overflow-visible xl:-ml-4">
+          TRAVEL BOOKING
+        </div>
         <img
           src="images/etour-mockbg.png"
           alt=""
@@ -139,7 +142,7 @@
         <img
           src="images/etour-mocintro.png"
           alt=""
-          class="absolute -top-6 md:-top-16 left-1/2 transform -translate-x-1/2 w-96 md:w-120 lg:w-200 xl:w-210 object-cover wow animate__animated animate__zoomIn"
+          class="absolute top-4 md:top-10 lg:top-0 xl:top-0 left-1/2 transform -translate-x-1/2 w-105 md:w-120 lg:w-175 xl:w-240 object-cover wow animate__animated animate__zoomIn"
         />
         <div
           class="size-40 md:size-72 lg:size-130 bg-primary-600 rounded-full blur-200 md:blur-400 lg:blur-800 absolute top-36 right-56 -z-10"
@@ -179,7 +182,7 @@
       </div>
       <!-- mục tiêu -->
       <div
-        class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-10 lg:gap-24 px-8 md:px-4 lg:px-32 relative z-0"
+        class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-10 lg:gap-24 px-8 md:px-4 lg:px-32 relative z-0 -mt-6 md:-mt-0"
       >
         <div class="flex flex-col gap-2 wow animate__animated animate__fadeInUp">
           <div
@@ -251,7 +254,7 @@
         </div>
       </div>
       <!-- user persona -->
-      <div class="flex flex-col md:flex-row gap-4 md:gap-6 z-0">
+      <div class="flex flex-col md:flex-row gap-4 md:gap-6 z-0 xl:pt-10">
         <div class="flex flex-col lg:justify-between gap-5">
           <div class="flex items-center gap-6 lg:gap-10 wow animate__animated animate__fadeInLeft">
             <img
@@ -359,7 +362,7 @@
             </ul>
           </div>
           <div
-            class="flex flex-col gap-2 lg:gap-5 p-4 lg:p-6 bg-gradient-to-br from-white/20 to-white/5 bg-opacity-30 rounded-xl w-96 lg:w-190 wow animate__animated animate__fadeInRight"
+            class="flex flex-col gap-2 lg:gap-5 p-4 lg:p-6 bg-gradient-to-br from-white/20 to-white/5 bg-opacity-30 rounded-xl md:w-96 lg:w-190 wow animate__animated animate__fadeInRight"
           >
             <div
               class="font-inter text-primary-400 text-lg md:font-anton md:text-xl lg:text-3xl"
@@ -382,7 +385,7 @@
         </div>
       </div>
       <!-- sitemap title -->
-      <div class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp relative z-0">
+      <div class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 wow animate__animated animate__fadeInUp relative z-0">
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">4</div>
         <div
           class="font-anton text-2xl text-primary-500 md:text-3xl lg:text-4xl -ml-3"
@@ -394,7 +397,7 @@
         ></div>
       </div>
       <!-- sitemap -->
-      <img src="images/etour-sitemap.png" alt="" class="lg:px-16 z-0 wow animate__animated animate__fadeInUp -mt-10" />
+      <img src="images/etour-sitemap.png" alt="" class="lg:px-16 z-0 wow animate__animated animate__fadeInUp -mt-10 xl:pt-10" />
       <!-- wireframe title -->
       <div class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp">
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">5</div>
@@ -405,8 +408,8 @@
         </div>
       </div>
       <!-- wireframe -->
-      <div class="relative z-0 wow animate__animated animate__fadeInUp">
-        <img src="images/etour-wireframe.png" alt="" />
+      <div class="relative z-0 wow animate__animated animate__fadeInUp xl:pt-10">
+        <img src="images/etour-wireframe.png" alt="" class="-mt-10 md:-mt-0"/>
         <div
           class="size-40 md:size-72 lg:size-130 bg-primary-600 rounded-full blur-200 md:blur-400 lg:blur-800 absolute right-0 -bottom-20 -z-10"
         ></div>
@@ -422,7 +425,7 @@
       </div>
       <!-- style guide -->
       <div class="relative z-0 wow animate__animated animate__fadeInUp">
-        <img src="images/etour-styleguide.png" alt="" />
+        <img src="images/etour-styleguide.png" alt=""  class="-mt-10 md:-mt-0"/>
         <div
           class="size-40 md:size-72 lg:size-130 bg-primary-600 rounded-full blur-200 md:blur-400 lg:blur-800 absolute top-1/2 left-0 -z-10"
         ></div>
@@ -442,7 +445,7 @@
         ></div>
       </div>
       <!-- visual design -->
-      <div class="flex flex-col z-10 wow animate__animated animate__fadeInUp">
+      <div class="flex flex-col z-10 wow animate__animated animate__fadeInUp -mt-6 md:-mt-0">
         <img src="images/etour-visualdes.png" alt="" />
         <img src="images/etour-amoc.png" alt="" />
       </div>

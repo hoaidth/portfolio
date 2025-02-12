@@ -30,7 +30,7 @@
       class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 z-10"
     >
       <!-- navigation bar -->
-      <div class="flex justify-between items-center py-3 w-full">
+      <div class="flex justify-between items-center py-3 w-full relative z-10">
         <!-- personal logo -->
         <a href="index.html" class="z-0">
           <img src="images/logo.svg" alt=""/>
@@ -116,34 +116,37 @@
         </div>
       </div>
       <!-- content -->
-      <div class="flex flex-col items-center gap-15 w-full mt-4">
+      <div class="flex flex-col items-center gap-15 w-full mt-4 xl:-mt-10 z-0">
         <!-- hero section -->
         <div class="flex flex-col gap-0 md:gap-5 relative z-0">
           <div
-            class="flex flex-col items-center gap-4 md:gap-6 lg:gap-3 2xl:gap-0 justify-center z-10"
+            class="flex flex-col items-center gap-4 md:gap-6 lg:gap-3 xl:gap-0 justify-center z-10"
           >
             <div class="text-display2">I'M AN UI UX</div>
-            <div class="text-display1 -mt-17 2xl:-mt-24">DESIGNER</div>
+            <div class="text-display1 -mt-17 xl:-mt-28">DESIGNER</div>
           </div>
-          <div class="flex justify-between items-center z-20">
+          <div class="flex justify-between items-center z-20 xl:-mt-17">
             <div class="text-body2 lg:text-base w-32 md:w-64 lg:w-96">
               Design is more than just creating; it’s about shaping experiences
               that resonate with people.
             </div>
             <a
               href="https://drive.google.com/drive/folders/1xI4wpxb1GAOBIZpielkDdMLgSq1UxQ4h?usp=sharing"
-              class="flex gap-5 relative z-10"
+              class="flex items-center gap-2 relative z-10"
             >
               <span
                 class="font-inter text-md md:text-lg lg:text-2xl leading-120p font-medium bg-gradient-to-r from-secondary-700 to-primary-700 text-transparent bg-clip-text"
               >
                 View my CV
               </span>
-              <img
-                src="images/blue-arrow-up-right.png"
-                alt=""
-                class="object-cover"
-              />
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="hidden xl:block">
+                <path d="M9.3335 22.6663L22.6668 9.33301" stroke="#0072FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.3335 9.33301H22.6668V22.6663" stroke="#0072FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="xl:hidden">
+                  <path d="M7 17L17 7" stroke="#0072FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 7H17V17" stroke="#0072FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
             </a>
           </div>
           <!-- focus img -->
@@ -155,30 +158,39 @@
             <div
               class="w-56 md:w-120 xl:w-160 h-86 md:h-185 xl:h-240 bg-black blur-400 rounded-full absolute top-0 align-middle -z-10"
             ></div>
+            <div
+            class="size-86 lg:size-110 rounded-full bg-secondary-500 blur-300 md:blur-400 lg:blur-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"
+          ></div>
+          <div
+            class="w-130 h-160 lg:h-240 rounded-full bg-[#0F172B] blur-400 md:blur-500 absolute top-12 right-60 lg:left-160 -z-10"
+          ></div>
+          <div
+            class="size-86 lg:size-110 rounded-full bg-primary-600 blur-300 md:blur-400 lg:blur-300 absolute top-60 right-20 -z-10"
+          ></div>
           </div>
 
           <!-- table available/intern -->
           <div
-            class="absolute left-8 top-20 md:top-40 lg:top-48 xl:left-20 xl:top-68 flex flex-col items-center gap-2 bg-primary-600/60 p-2 md:p-3 xl:p-6 w-fit rounded-1 z-10 shadow-1 backdrop-blur-sm animate__animated animate__flipInX hover:animate-[pulse_0.5s_ease-in-out_infinite]"
+            class="absolute left-8 top-20 md:top-40 lg:top-48 xl:left-28 xl:top-86 flex flex-col items-center gap-2 xl:gap-6 bg-primary-600/60 p-2 md:p-3 xl:px-10 xl:py-8 w-fit rounded-1 xl:rounded-md z-10 shadow-1 backdrop-blur-sm animate__animated animate__heartBeat hover:animate-[pulse_0.5s_ease-in-out_infinite]"
           >
             <div class="flex justify-center gap-1">
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full"></div>
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full bg-white/30"></div>
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full bg-white/30"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full"></div>
             </div>
             <div
-              class="font-inter text-xs md:text-lg xl:text-2xl font-extrabold leading-120p text-white tracking-wider"
+              class="font-inter text-xs md:text-lg xl:text-3xl font-extrabold leading-120p text-white tracking-wider"
             >
               AVAILABLE
             </div>
           </div>
           <div
-            class="absolute left-60 top-10 md:left-110 md:top-15 lg:left-150 xl:left-190 xl:top-28 2xl:left-240 rotate-12 flex flex-col items-center gap-2 bg-secondary-600/60 px-4 py-2 md:px-6 md:py-3 xl:py-6 xl:px-8 w-fit rounded-1 z-10 shadow-1 backdrop-blur-sm animate__animated animate__flipInX hover:animate-[pulse_0.5s_ease-in-out_infinite]"
+            class="absolute left-60 top-10 md:left-110 md:top-15 lg:left-150 xl:top-28 xl:left-270 rotate-12 flex flex-col items-center gap-2 xl:gap-6 bg-secondary-600/60 px-4 py-2 md:px-6 md:py-3 xl:px-16 xl:py-8 w-fit rounded-1 xl:rounded-md z-10 shadow-1 backdrop-blur-sm animate__animated animate__heartBeat hover:animate-[pulse_0.5s_ease-in-out_infinite]"
           >
             <div class="flex justify-center gap-1">
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full"></div>
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full bg-white/30"></div>
-              <div class="size-[6px] md:size-2 border-0.5 rounded-full"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full bg-white/30"></div>
+              <div class="size-[6px] md:size-2 xl:size-4 border-0.5 rounded-full"></div>
             </div>
             <div
               class="font-inter text-xs md:text-lg xl:text-2xl font-extrabold leading-120p text-white tracking-wider"
@@ -186,16 +198,7 @@
               INTERN
             </div>
           </div>
-          <!-- shadow for focus img-->
-          <div
-            class="size-86 lg:size-110 rounded-full bg-secondary-500 blur-300 md:blur-250 lg:blur-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          ></div>
-          <div
-            class="w-130 h-160 lg:h-240 rounded-full bg-[#0F172B] blur-600 md:blur-130 absolute top-12 right-60 lg:left-160"
-          ></div>
-          <div
-            class="size-86 lg:size-110 rounded-full bg-primary-600 blur-250 md:blur-300 lg:blur-200 absolute top-60 right-40"
-          ></div>
+
           
         </div>
         <!-- about section -->
