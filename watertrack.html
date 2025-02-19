@@ -1,0 +1,749 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Tracker | Henry</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="portfolio.js">
+      new WOW().init();
+    </script>
+  </head>
+  <body onmousemove="moveCursor(event)">
+    <div
+      id="cursor"
+      class="size-40 bg-primary-700 blur-100 rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+    ></div>
+    <div
+      class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col items-center gap-12 lg:gap-15"
+    >
+      <!-- navigation bar -->
+      <div class="flex justify-between items-center py-3 w-full relative z-20">
+        <!-- personal logo -->
+        <a href="index.html" class="z-0">
+          <img src="images/logo.svg" alt="" class="hover:animate-pulse" />
+        </a>
+        <!-- menu -->
+        <div
+          id="desktopMenu"
+          class="flex gap-8 items-baseline ml-auto hidden sm:flex z-0"
+        >
+          <a
+            href="work.html"
+            class="font-inter text-white/80 text-sm lg:text-xl hover:text-white"
+            >Work</a
+          >
+          <a
+            href="about.html"
+            class="font-inter text-white/80 text-sm lg:text-xl hover:text-white"
+            >About</a
+          >
+          <!-- button -->
+          <div
+            class="flex items-center rounded-5 p-small bg-gradient-to-r from-secondary-700 to-primary-700 hover:shadow-buttonhover"
+          >
+            <a
+              href="mailto:hoaingoc.creative@gmail.com?subject=[VIA WEBSITE]"
+              class="font-inter text-white/80 text-sm lg:text-xl hover:text-white rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+        <svg
+          class="sm:hidden"
+          onclick="toggleMenu()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="33"
+          height="33"
+          viewBox="0 0 33 33"
+          fill="none"
+        >
+          <path
+            d="M4.5 16.5H28.5M4.5 8.5H28.5M4.5 24.5H28.5"
+            stroke="#F6F6F6"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div
+          id="mobileMenu"
+          class="fixed top-0 right-0 h-screen w-screen flex flex-col gap-3 bg-background/80 backdrop-blur-md px-5 pt-2 hidden z-30"
+        >
+          <div class="flex justify-between items-center">
+            <img src="images/logo.svg" alt="" />
+            <svg
+              class="z-10"
+              onclick="toggleMenu()"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="41"
+              viewBox="0 0 40 41"
+              fill="none"
+            >
+              <path
+                d="M30 10.5L10 30.5"
+                stroke="#B100CF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 10.5L30 30.5"
+                stroke="#B100CF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <a href="index.html" class="flex justify-between items-center pt-7">
+            <div class="font-inter font-light text-2xl text-white">Home</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="work.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter font-light text-2xl text-white">Work</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a href="about.html" class="flex justify-between items-center pt-6">
+            <div class="font-inter font-light text-2xl text-white">About</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div class="w-full h-xxs bg-white/60"></div>
+          <a
+            href="mailto:hoaingoc.creative@gmail.com?subject=VIA WEBSITE"
+            class="flex justify-between items-center pt-6"
+          >
+            <div class="font-inter font-light text-2xl text-white">Contact</div>
+            <img
+              src="images/icon-white-arrow-up-right.png"
+              alt=""
+              class="size-6"
+            />
+          </a>
+          <div
+            class="absolute top-40 -left-12 -z-10 h-96 w-66 bg-secondary-600 blur-250"
+          ></div>
+          <div class="w-full h-xxs bg-white/60"></div>
+        </div>
+      </div>
+      <!-- case title -->
+      <div
+        class="flex flex-col md:flex-row gap-4 md:justify-between md:items-center w-full lg:px-24 z-10"
+      >
+        <div class="flex flex-col gap-0 md:gap-3">
+          <div
+            class="font-anton text-4xl lg:text-8xl text-white leading-120p w-full"
+          >
+            WATER TRACKER
+          </div>
+          <div
+            class="font-inter text-xs md:text-sm lg:text-lg text-white/80 italic"
+          >
+            Thiết kế UI cho nhu cầu cá nhân
+          </div>
+        </div>
+        <div
+          class="font-inter text-sm lg:text-4 leading-150p text-white/80 md:w-90 lg:w-106"
+        >
+          Case Study thực tế trình bày quy trình thiết kế giao diện người dùng
+          cho ứng dụng Nhắc nhở uống nước - một ứng dụng di động đơn giản giúp
+          người dùng quan tâm đến sức khỏe của bản thân.
+        </div>
+      </div>
+      <!-- case illus main -->
+      <img src="images/wttracker-moc1.png" alt="" class="rounded-1 z-10" />
+      <!-- tổng quan -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 z-10">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Tổng quan
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Trong thế giới công nghệ hiện đại, nơi các ứng dụng phục vụ mọi nhu
+          cầu cá nhân, xã hội và công việc, luôn có một vị trí đặc biệt dành cho
+          những ứng dụng giúp chúng ta duy trì thói quen lành mạnh mỗi ngày. Từ
+          lịch trình tập luyện, theo dõi giấc ngủ, nhắc nhở uống thuốc đến các
+          ứng dụng hỗ trợ dinh dưỡng, tất cả những công cụ này đều góp phần nâng
+          cao sức khỏe và chất lượng cuộc sống của người dùng.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Một trong những thói quen quan trọng nhưng thường bị lãng quên là uống
+          đủ nước. Giữa lịch trình bận rộn, nhiều người không nhận ra rằng cơ
+          thể mình đang thiếu nước, dẫn đến mệt mỏi, mất tập trung và ảnh hưởng
+          đến sức khỏe tổng thể. Đó chính là lý do tại sao các ứng dụng nhắc nhở
+          uống nước ra đời – nhằm giúp người dùng duy trì lượng nước cần thiết
+          một cách dễ dàng và hiệu quả.
+        </div>
+      </div>
+      <!-- quá trình -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 z-10">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Quá trình thiết kế
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Bạn đã bao giờ quên uống nước đủ trong ngày chưa? Cuộc sống bận rộn
+          với hàng trăm nhiệm vụ khiến chúng ta dễ dàng bỏ quên những điều cơ
+          bản, như duy trì lượng nước cần thiết cho cơ thể. Tuy nhiên, việc
+          không uống đủ nước có thể ảnh hưởng nghiêm trọng đến sức khỏe, từ mất
+          nước nhẹ đến giảm hiệu suất làm việc, thậm chí gây ra các vấn đề
+          nghiêm trọng hơn nếu tình trạng này kéo dài.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+        >
+          Ứng dụng theo dõi việc uống nước được thiết kế với mục đích giúp người
+          dùng hình thành và duy trì thói quen uống nước một cách khoa học.
+          Trước hết, ứng dụng phải nhắc nhở người dùng uống nước đúng thời điểm,
+          đồng thời cung cấp dữ liệu và thống kê giúp họ theo dõi lượng nước
+          tiêu thụ hàng ngày, từ đó cải thiện sức khỏe tổng thể.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+        >
+          Đối với designer, một giao diện người dùng chất lượng cao cần đáp ứng
+          bốn yếu tố quan trọng: <br />
+          <ul class="list-disc pl-6 md:pl-10 lg:pl-20">
+            <li>
+              Khả năng sử dụng: Ứng dụng phải đơn giản, dễ hiểu và thuận tiện để
+              sử dụng hàng ngày.
+            </li>
+            <li>
+              Tiện ích: Ứng dụng cần cung cấp thông tin hữu ích và thực sự giúp
+              người dùng giải quyết vấn đề.
+            </li>
+            <li>
+              Khả năng truy cập: Thiết kế phải phù hợp với nhiều đối tượng người
+              dùng, từ người trẻ đến người cao tuổi.
+            </li>
+            <li>
+              Mong muốn: Ứng dụng không chỉ giúp theo dõi việc uống nước mà còn
+              tạo ra trải nghiệm hấp dẫn, giữ chân người dùng và khuyến khích họ
+              duy trì thói quen lành mạnh.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+        >
+          Dựa trên những yếu tố này, việc đặt mục tiêu không chỉ tạo ra một ứng
+          dụng giúp người dùng uống nước đầy đủ mà còn cung cấp thông tin hữu
+          ích để nâng cao giá trị sử dụng. Đồng thời, giao diện ứng dụng cũng
+          được đầu tư về mặt thẩm mỹ: vì đây là ứng dụng sử dụng hàng ngày, tại
+          sao không thêm vào một chút tinh tế và hấp dẫn để nâng cao trải nghiệm
+          người dùng?
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+        >
+          Dựa trên những yếu tố này, việc đặt mục tiêu không chỉ tạo ra một ứng
+          dụng giúp người dùng uống nước đầy đủ mà còn cung cấp thông tin hữu
+          ích để nâng cao giá trị sử dụng. Đồng thời, giao diện ứng dụng cũng
+          được đầu tư về mặt thẩm mỹ: vì đây là ứng dụng sử dụng hàng ngày, tại
+          sao không thêm vào một chút tinh tế và hấp dẫn để nâng cao trải nghiệm
+          người dùng?
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+        >
+          Các chức năng cơ bản được cân nhắc đưa vào thiết kế ứng dụng này bao
+          gồm: <br />
+          <ol class="list-disc pl-6 md:pl-10 lg:pl-20">
+            <li>
+              Thêm mục tiêu uống nước cá nhân theo thể trạng và hoạt động hàng
+              ngày.
+            </li>
+            <li>Nhắc nhở và thông báo uống nước đúng thời điểm.</li>
+            <li>
+              Theo dõi lượng nước đã uống và đưa ra gợi ý điều chỉnh phù hợp.
+            </li>
+            <li>
+              Xem báo cáo, thống kê về lượng nước tiêu thụ và đặt mục tiêu theo
+              tuần/tháng.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- trang chủ -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 z-10">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Màn hình trang chủ
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Hãy cũng xem qua 2 ý tưởng UI cho Trang chủ của ứng dụng:
+        </div>
+      </div>
+      <img src="images/wttracker-moc2.png" alt="" class="-mt-8 z-10" />
+      <!-- màn hình 1 -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 -mt-8 z-10">
+        <div class="text-xl md:text-3xl font-bold text-white">
+          Màn hình thứ nhất
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Mục tiêu của ứng dụng là tạo giao diện mang tính thu hút người dùng. Ý
+          tưởng ban đầu, phần tử chính trong màn hình sẽ là tấm bảng Hyderated.
+          Điều đặc biệt là tấm bảng bị nghiêng khi nước uống trong ngày chưa đạt
+          mục tiêu. Khi mục tiêu uống nước hàng ngày hoàn thành, tấm bảng sẽ ở
+          vị trí được canh ngang như bình thường.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Trước hết, sự nghiêng lệch của bảng khi nước chưa chạm tới tượng trưng
+          cho trạng thái không cân bằng của cơ thể khi chưa được cung cấp đủ
+          nước. Nó gợi lên cảm giác bất ổn, cho thấy rằng người dùng vẫn cần bổ
+          sung thêm nước để đạt trạng thái hydrat hóa tối ưu. Khi nước dâng lên
+          và chạm bảng, bảng dần trở về đúng vị trí, thể hiện sự cân bằng được
+          khôi phục, cũng như cơ thể khi được cấp đủ nước sẽ hoạt động tốt hơn.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Bên cạnh đó, hiệu ứng này còn đóng vai trò như một yếu tố khuyến khích
+          người dùng tiếp tục uống nước. Khi nhìn thấy bảng nghiêng, họ sẽ có xu
+          hướng muốn đưa nó về vị trí ổn định bằng cách uống thêm nước. Đây là
+          cách thiết kế trực quan hóa tiến trình theo dõi, giúp người dùng cảm
+          nhận được sự thay đổi thay vì chỉ dựa vào các con số thống kê khô
+          khan.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Ngoài việc tạo động lực, chi tiết này còn mang lại cảm giác thành tựu
+          khi người dùng hoàn thành mục tiêu. Khi bảng trở về vị trí ngay ngắn,
+          nó tạo ra một phản hồi tích cực, giúp người dùng nhận biết ngay lập
+          tức rằng họ đã đạt được một cột mốc quan trọng trong ngày. Phản hồi
+          trực quan này giúp nâng cao trải nghiệm sử dụng ứng dụng, khiến quá
+          trình theo dõi uống nước trở nên thú vị và tương tác hơn.
+        </div>
+      </div>
+      <!-- màn hình 2 -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 z-10">
+        <div class="text-xl md:text-3xl font-bold text-white">
+          Màn hình thứ hai
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Màn hình thứ ba sử dụng hình ảnh một chai nước đang được rót đầy để
+          biểu thị quá trình hydrat hóa của cơ thể. Hình ảnh này tạo ra sự liên
+          tưởng trực tiếp và dễ hiểu: cơ thể con người giống như một chiếc bình
+          chứa, cần được bổ sung nước đều đặn để duy trì hoạt động tối ưu.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Dòng nước chảy vào chai tượng trưng cho quá trình nạp nước, nhấn mạnh
+          rằng việc uống nước là một hành động liên tục và cần thiết. Khi mức
+          nước trong chai tăng lên, nó tạo ra cảm giác tiến trình đang diễn ra,
+          giúp người dùng dễ dàng nhận biết trạng thái hydrat hóa của mình theo
+          cách trực quan nhất. Đây là một cách thể hiện tự nhiên và gần gũi,
+          giúp người dùng hình dung rằng mỗi lần uống nước là một bước tiến nhỏ
+          trong việc chăm sóc sức khỏe.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Bên cạnh đó, biểu tượng tia sét xuất hiện bên trong chai củng cố thêm
+          ý nghĩa rằng nước không chỉ giúp duy trì sự sống mà còn đóng vai trò
+          quan trọng trong việc cung cấp năng lượng. Điều này gợi ý rằng uống
+          nước không chỉ để giải khát mà còn giúp cơ thể hoạt động hiệu quả hơn,
+          duy trì sự tỉnh táo và sức bền trong suốt cả ngày.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Tổng thể, màn hình thứ ba mang lại cảm giác nhẹ nhàng, trực quan và tự
+          nhiên, giúp việc theo dõi lượng nước trở thành một trải nghiệm gần gũi
+          và dễ tiếp cận. Nó nhấn mạnh tầm quan trọng của việc bổ sung nước một
+          cách đều đặn, biến một thói quen hàng ngày thành một hành động có ý
+          thức, giúp người dùng duy trì sức khỏe tốt hơn một cách bền vững.
+        </div>
+      </div>
+      <!-- so sánh -->
+      <div
+        class="font-inter text-xl md:text-3xl font-bold text-white text-center z-10"
+      >
+        So sánh 2 màn hình
+      </div>
+      <img src="images/wttracker-ss1.png" alt="" class="-mt-8 z-10" />
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light -mt-3"
+      >
+        Lựa chọn phong cách theo màn hình số 2 là lựa chọn hợp lý cho ứng dụng
+        này.
+      </div>
+      <!-- style guide -->
+      <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white z-10">
+        Style Guide
+      </div>
+      <img
+        src="images/wttracker-styleguide.png"
+        alt=""
+        class="lg:px-32 -mt-8 z-10"
+      />
+      <!-- màn hình nhập nước uống -->
+      <div
+        class="font-inter text-3xl md:text-4xl lg:text-5xl font-bold text-white text-left md:w-175 lg:w-210 z-10"
+      >
+        Màn hình nhập lượng nước uống
+      </div>
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-8 md:w-175 lg:w-210 z-10"
+      >
+        Thiết kế tối giản và trực quan giúp người dùng nhanh chóng hiểu được
+        cách thao tác mà không cần hướng dẫn. Màu sắc chủ đạo là xanh dương kết
+        hợp với trắng tạo cảm giác tươi mát, nhẹ nhàng, phù hợp với chủ đề sức
+        khỏe và theo dõi lượng nước uống.
+      </div>
+      <div class="relative flex items-center lg:-mt-10 z-10">
+        <img src="images/wttracker-bgmoc3.png" alt="" class="rounded-md" />
+        <div
+          class="flex gap-5 md:gap-9 lg:gap-17 w-full absolute justify-center items-center"
+        >
+          <img
+            src="images/wttracker-moc31.png"
+            alt=""
+            class="w-24 md:w-40 lg:w-80 rounded-lg md:rounded-2xl lg:rounded-3xl shadow-screenapp"
+          />
+          <img
+            src="images/wttracker-moc32.png"
+            alt=""
+            class="w-24 md:w-40 lg:w-80 rounded-lg md:rounded-2xl lg:rounded-3xl shadow-screenapp"
+          />
+          <img
+            src="images/mocvid1.gif"
+            alt=""
+            class="w-24 md:w-40 lg:w-80 rounded-lg md:rounded-2xl lg:rounded-3xl shadow-screenapp"
+          />
+        </div>
+      </div>
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-10 md:w-175 lg:w-210 z-10"
+      >
+        Các biểu tượng minh họa cho từng loại nước giúp người dùng dễ dàng phân
+        biệt và chọn lựa một cách nhanh chóng. Cách bố trí theo dạng lưới ba cột
+        giúp tiết kiệm không gian và tối ưu hóa việc hiển thị thông tin trên màn
+        hình. Thanh trượt cho phép người dùng chọn lượng nước một cách trực quan
+        mà không cần nhập số liệu thủ công, đồng thời hiển thị con số rõ ràng để
+        tránh nhầm lẫn.
+      </div>
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-10 md:w-175 lg:w-210 z-10"
+      >
+        Nút "Thêm nước" cũng được thiết kế nổi bật với màu xanh dương, tạo điểm
+        nhấn rõ ràng và giúp người dùng dễ dàng xác nhận hành động.
+      </div>
+      <!-- chuỗi nước -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 -mt-8 z-10">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Chuỗi nước
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Chuỗi nước trong ứng dụng hoạt động như một hệ thống khuyến khích liên
+          tục, giúp người dùng duy trì thói quen uống nước đầy đủ mỗi ngày. Khi
+          hoàn thành mục tiêu nước uống trong một ngày, người dùng sẽ nhận được
+          một chuỗi nước, đánh dấu rằng họ đã thực hiện tốt nhiệm vụ. Nếu họ
+          tiếp tục đạt mục tiêu vào những ngày tiếp theo, chuỗi này sẽ kéo dài,
+          tạo ra cảm giác thành tựu và thúc đẩy việc duy trì thói quen đều đặn.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Cơ chế này tận dụng hiệu ứng tâm lý "tránh mất mát" để tạo động lực,
+          bởi vì nếu người dùng bỏ lỡ một ngày không uống đủ nước, chuỗi sẽ bị
+          mất và phải bắt đầu lại từ đầu. Điều này khiến họ có xu hướng kiên trì
+          hơn để bảo vệ thành quả đã xây dựng. Cảm giác đạt được một chuỗi dài
+          cũng giúp củng cố tinh thần tự giác, biến việc uống nước từ một hành
+          động đơn lẻ thành một phần của thói quen hàng ngày.
+        </div>
+      </div>
+      <img src="images/wttracker-moc4.png" alt="" class="lg:-mt-5 z-10" />
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light flex flex-col gap-2 md:w-175 lg:w-210 lg:-mt-5 z-10"
+      >
+        <div>
+          Ý tưởng về chuỗi nước trong ứng dụng được áp dụng từ cơ chế “streak”
+          phổ biến trong các ứng dụng hướng đến việc xây dựng thói quen và duy
+          trì động lực. Mô hình này xuất phát từ lĩnh vực tâm lý học hành vi,
+          đặc biệt là các nguyên tắc về tích lũy phần thưởng và tránh mất mát.
+        </div>
+        <div>
+          Một trong những ví dụ điển hình của cơ chế này là Duolingo, ứng dụng
+          học ngoại ngữ, nơi người dùng duy trì “chuỗi ngày học liên tiếp” để
+          tạo cảm giác thành tựu. Khi chuỗi càng dài, người dùng càng cảm thấy
+          gắn bó với quá trình học và có động lực để tiếp tục. Điều này cũng
+          xuất hiện trong nhiều ứng dụng thể dục như Apple Fitness hay Strava,
+          nơi người dùng phải duy trì các hoạt động thể chất hàng ngày để không
+          bị mất chuỗi.
+        </div>
+        <div>
+          Ngoài các ứng dụng hiện đại, ý tưởng này cũng có nguồn gốc từ các cơ
+          chế động lực truyền thống, chẳng hạn như lịch đánh dấu thói quen. Việc
+          đánh dấu vào một lịch mỗi ngày hoàn thành nhiệm vụ giúp người dùng
+          thấy rõ tiến trình của mình và cảm thấy có trách nhiệm hơn với mục
+          tiêu đã đặt ra.
+        </div>
+        <div>
+          Trong trường hợp của ứng dụng theo dõi nước, cơ chế chuỗi nước được áp
+          dụng để biến hành động uống nước – vốn đơn giản nhưng dễ bị lãng quên
+          – thành một thói quen có ý nghĩa. Nhờ đó, người dùng cảm thấy có động
+          lực duy trì đều đặn, tránh gián đoạn và từng bước hình thành một lối
+          sống lành mạnh hơn.
+        </div>
+      </div>
+      <!-- dashboard -->
+      <div class="flex flex-col gap-5 font-inter md:w-175 lg:w-210 -mt-8 z-10">
+        <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Dashboard
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light"
+        >
+          Trang tổng quan của ứng dụng theo dõi uống nước được thiết kế trực
+          quan, giúp người dùng dễ dàng theo dõi thói quen uống nước của mình
+          theo từng ngày, tuần, tháng hoặc năm. Biểu đồ cột hiển thị lượng nước
+          uống vào mỗi ngày trong tuần, với các cột có chiều cao khác nhau phản
+          ánh sự biến động trong mức tiêu thụ. Một đường chấm ngang được sử dụng
+          để đánh dấu mức trung bình, từ đó người dùng có thể so sánh và đánh
+          giá xem liệu họ đã đạt được lượng nước cần thiết hay chưa. Cách thể
+          hiện này không chỉ giúp nhận diện nhanh ngày nào uống ít hoặc nhiều mà
+          còn tạo ra động lực để duy trì thói quen lành mạnh.
+        </div>
+        <div
+          class="text-sm md:text-lg lg:text-xl text-white/90 leading-120p font-light -mt-3"
+        >
+          Ngay bên dưới biểu đồ, ứng dụng cung cấp thông tin về mức tiêu thụ
+          trung bình hàng ngày, giúp người dùng có một con số cụ thể để hình
+          dung về thói quen của mình. Bên cạnh con số 1.475 ml, một vòng tròn
+          trực quan được sử dụng để biểu thị tiến độ, giúp người dùng dễ dàng
+          nắm bắt thông tin mà không cần phân tích số liệu phức tạp.
+        </div>
+      </div>
+      <img src="images/wttracker-moc5.png" alt="" class="rounded-md z-10" />
+      <div class="relative flex items-center justify-center lg:-mt-15 z-10">
+        <img src="images/wttracker-bgmoc6.png" alt="" class="rounded-md" />
+        <img
+          src="images/mocvid2.gif"
+          alt=""
+          class="absolute w-24 md:w-40 lg:w-80 rounded-lg md:rounded-2xl lg:rounded-10 shadow-screenapp -translate-x-2/3"
+        />
+      </div>
+      <div
+        class="font-inter text-sm md:text-lg lg:text-xl text-white/90 leading-150p font-light flex flex-col gap-2 md:w-175 lg:w-210 lg:-mt-5 z-10"
+      >
+        <div>
+          Ngoài việc hiển thị dữ liệu, ứng dụng còn sử dụng hệ thống “chuỗi
+          nước” nhằm khuyến khích người dùng duy trì thói quen tốt. Chuỗi nước
+          hiện tại cho biết người dùng đã liên tục đạt mục tiêu trong bao nhiêu
+          ngày, trong khi chuỗi dài nhất ghi nhận kỷ lục cao nhất mà họ từng duy
+          trì được. Đây là một yếu tố tâm lý quan trọng, vì việc theo dõi streak
+          sẽ tạo động lực mạnh mẽ, giúp người dùng duy trì sự nhất quán trong
+          việc uống nước.
+        </div>
+        <div>
+          Thiết kế của ứng dụng cũng có một số tiện ích khác, như thanh chuyển
+          đổi chế độ với biểu tượng giọt nước và biểu đồ, giúp người dùng có thể
+          tùy chỉnh cách hiển thị dữ liệu theo sở thích cá nhân. Giao diện tông
+          màu xanh nhẹ nhàng tạo cảm giác thư giãn, gần gũi với hình ảnh của
+          nước, giúp trải nghiệm sử dụng trở nên dễ chịu hơn.
+        </div>
+        <div>
+          Nhìn chung, thiết kế này có nhiều ưu điểm đáng kể. Biểu đồ cột giúp
+          người dùng dễ dàng nắm bắt xu hướng tiêu thụ nước, con số trung bình
+          và vòng tròn tiến độ làm cho thông tin trở nên trực quan hơn, trong
+          khi hệ thống chuỗi uống nước đóng vai trò như một cơ chế thúc đẩy hành
+          vi tích cực. Sự kết hợp của các yếu tố này giúp ứng dụng không chỉ
+          đóng vai trò theo dõi mà còn trở thành một công cụ hỗ trợ cải thiện
+          thói quen uống nước một cách hiệu quả.
+        </div>
+      </div>
+      <!-- other cases -->
+      <div class="flex flex-col gap-3 lg:gap-8 lg:px-24">
+        <div
+          class="font-inter text-white font-bold text-lg md:text-3xl lg:text-4xl lg:pl-20"
+        >
+          Other case studies
+        </div>
+        <div
+          class="font-inter text-white text-sm md:text-lg md:w-120 lg:w-150 lg:pl-20 lg:-mt-4"
+        >
+          If you are interested to see more practical case studies with creative
+          flows for UI/UX design, here is the set of them.
+        </div>
+        <div
+          class="flex flex-col gap-2 md:flex-row md:gap-6 lg:gap-8 lg:-mt-10"
+        >
+          <!-- card 1 -->
+          <div
+            class="md:w-1/2 flex flex-col gap-6 p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img
+              src="images/psycall-thumbnail.png"
+              alt=""
+              class="rounded-2xl lg:pt-10 lg:scale-110"
+            />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">PSYCALL</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For connecting users with professional psychologists through
+                seamless appointment scheduling.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="psycall.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="md:w-1/2 flex flex-col gap-6 p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img src="images/etour-thumbnail.png" alt="" class="rounded-2xl" />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">e-Tour</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For simplifying travel planning and booking, allowing users to
+                explore destinations, customize itineraries, and book tours
+                seamlessly.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="etour.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact section -->
+      <div
+        class="flex flex-col gap-6 md:items-center pt-6 md:pt-15 z-10 wow animate__animated animate__fadeIn"
+      >
+        <div class="text-h3 xl:text-16 text-white/30 md:text-center w-full">
+          Let's
+          <span
+            class="font-anton text-h3 xl:text-16 font-normal leading-120p text-white/80"
+            >Get in touch</span
+          >
+        </div>
+        <div
+          class="text-body1 md:text-center lg:text-lg lg:text-white/80 w-full md:w-120 lg:w-185 pt-4"
+        >
+          I’m always excited to connect and collaborate! Whether you have a
+          project idea, feedback on my work, or an opportunity to discuss, feel
+          free to reach out.
+        </div>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-7 justify-center">
+          <div class="flex gap-4 items-center">
+            <div
+              class="flex items-center justify-center p-2 bg-white/20 rounded-full size-10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.64089 2.4021C0.840248 0.929629 2.13956 0 3.49004 0H6.05848C7.34977 0 8.49619 0.826291 8.90453 2.05132L9.95397 5.19963C10.405 6.55283 9.60863 8.00362 8.22482 8.34957C7.88646 8.43416 7.76975 8.85554 8.01637 9.10216L11.3978 12.4836C11.6445 12.7303 12.0658 12.6135 12.1504 12.2752C12.4964 10.8914 13.9472 10.095 15.3004 10.546L18.4487 11.5955C19.6737 12.0038 20.5 13.1502 20.5 14.4415V17.01C20.5 18.3604 19.5704 19.6598 18.0979 19.8591C17.4114 19.9521 16.711 20 16 20C7.43959 20 0.5 13.0604 0.5 4.5C0.5 3.78898 0.547941 3.08863 0.64089 2.4021Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+
+            <div class="text-body1 hover:text-white">(+84) 397 617 144</div>
+          </div>
+          <a
+            href="mailto:hoaingoc.creative@gmail.com?subject=VIA WEBSITE"
+            class="flex gap-4 items-center"
+          >
+            <div
+              class="flex items-center justify-center p-2 bg-white/20 rounded-full size-10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="16"
+                viewBox="0 0 21 16"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.46802 5.86002e-07H16.532C16.9706 -1.16926e-05 17.3491 -2.25399e-05 17.6624 0.021351C17.9922 0.043855 18.3221 0.0933587 18.6481 0.228363C19.3831 0.532845 19.9672 1.11687 20.2716 1.85195C20.4066 2.17788 20.4561 2.50779 20.4787 2.83762C20.5 3.15088 20.5 3.52936 20.5 3.96801V12.032C20.5 12.4706 20.5 12.8491 20.4787 13.1624C20.4561 13.4922 20.4066 13.8221 20.2716 14.1481C19.9672 14.8831 19.3831 15.4672 18.6481 15.7716C18.3221 15.9066 17.9922 15.9561 17.6624 15.9787C17.3491 16 16.9706 16 16.532 16H4.46801C4.02936 16 3.65088 16 3.33762 15.9787C3.00779 15.9561 2.67788 15.9066 2.35195 15.7716C1.61687 15.4672 1.03284 14.8831 0.728363 14.1481C0.593359 13.8221 0.543855 13.4922 0.521351 13.1624C0.499977 12.8491 0.499988 12.4706 0.500001 12.032V3.96802C0.499988 3.52937 0.499977 3.15088 0.521351 2.83762C0.543855 2.50779 0.593359 2.17788 0.728363 1.85195C1.03284 1.11687 1.61687 0.532845 2.35195 0.228363C2.67788 0.0933587 3.00779 0.043855 3.33762 0.021351C3.65088 -2.25399e-05 4.02937 -1.16926e-05 4.46802 5.86002e-07ZM2.81774 2.27753C3.18142 1.86189 3.81318 1.81978 4.22882 2.18346L9.84178 7.0948C10.2188 7.4247 10.7818 7.4247 11.1588 7.0948L16.7717 2.18346C17.1874 1.81978 17.8191 1.86189 18.1828 2.27753C18.5465 2.69317 18.5044 3.32493 18.0888 3.68861L12.4758 8.59995C11.3447 9.58965 9.65585 9.58965 8.52477 8.59995L2.91181 3.68861C2.49617 3.32493 2.45405 2.69317 2.81774 2.27753Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="text-body1 hover:text-white">
+              hoaingoc.creative@gmail.com
+            </div>
+          </a>
+        </div>
+        <!-- <div class="flex gap-2 justify-center items-center pt-9">
+          <img src="images/icon-Instagram.png" alt="" /><img
+            src="images/icon-Linkedin.png"
+            alt=""
+          /><img src="images/icon-behance.png" alt="" />
+        </div> -->
+      </div>
+      <!-- footer -->
+      <div class="w-full flex flex-col gap-5">
+        <div class="w-full h-xs bg-white/15"></div>
+        <div class="w-full flex justify-between items-center">
+          <div class="text-body2 italic">Henry</div>
+          <div class="text-body2 italic">2025</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

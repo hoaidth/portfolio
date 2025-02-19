@@ -24,7 +24,7 @@
   <body onmousemove="moveCursor(event)">
     <div
       id="cursor"
-      class="size-40 bg-primary-700 blur-3xl rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+      class="size-40 bg-primary-700 blur-100 rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
     ></div>
     <div
       class="bg-background max-w-screen overflow-hidden px-5 sm:px-10 md:px-16 flex flex-col gap-12 lg:gap-15"
@@ -452,7 +452,7 @@
       </div>
       <!-- sitemap title -->
       <div
-        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 wow animate__animated animate__fadeInUp relative z-0"
+        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 relative z-0"
       >
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">4</div>
         <div
@@ -468,11 +468,11 @@
       <img
         src="images/etour-sitemap.png"
         alt=""
-        class="lg:px-16 z-0 wow animate__animated animate__fadeInUp -mt-10 xl:pt-10"
+        class="lg:px-16 z-0 wow animate__animated animate__zoomIn -mt-10 xl:pt-10"
       />
       <!-- wireframe title -->
       <div
-        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp"
+        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0"
       >
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">5</div>
         <div
@@ -483,7 +483,7 @@
       </div>
       <!-- wireframe -->
       <div
-        class="relative z-0 wow animate__animated animate__fadeInUp xl:pt-10"
+        class="relative z-0 wow animate__animated animate__zoomIn xl:pt-10"
       >
         <img src="images/etour-wireframe.png" alt="" class="-mt-10 md:-mt-0" />
         <div
@@ -492,7 +492,7 @@
       </div>
       <!-- style guide title -->
       <div
-        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0 wow animate__animated animate__fadeInUp"
+        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 z-0"
       >
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">6</div>
         <div
@@ -502,7 +502,7 @@
         </div>
       </div>
       <!-- style guide -->
-      <div class="relative z-0 wow animate__animated animate__fadeInUp">
+      <div class="relative z-0 wow animate__animated animate__zoomIn">
         <img src="images/etour-styleguide.png" alt="" class="-mt-10 md:-mt-0" />
         <div
           class="size-40 md:size-72 lg:size-130 bg-primary-600 rounded-full blur-200 md:blur-400 lg:blur-800 absolute top-1/2 left-0 -z-10"
@@ -510,7 +510,7 @@
       </div>
       <!-- visual design title -->
       <div
-        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 relative z-0 wow animate__animated animate__fadeInUp"
+        class="flex justify-center items-center pt-6 md:pt-12 lg:pt-28 relative z-0"
       >
         <div class="font-anton text-16 text-primary-300 lg:text-8xl">7</div>
         <div
@@ -524,14 +524,87 @@
       </div>
       <!-- visual design -->
       <div
-        class="flex flex-col z-10 wow animate__animated animate__fadeInUp -mt-6 md:-mt-0"
+        class="flex flex-col z-10 wow animate__animated animate__zoomIn -mt-6 md:-mt-0"
       >
         <img src="images/etour-visualdes.png" alt="" />
         <img src="images/etour-amoc.png" alt="" />
       </div>
+      <!-- other cases -->
+      <div class="flex flex-col gap-3 w-full">
+        <div
+          class="font-inter text-white font-bold text-lg md:text-3xl lg:text-4xl lg:pl-20"
+        >
+          Other case studies
+        </div>
+        <div
+          class="font-inter text-white text-sm md:text-lg md:w-120 lg:w-150 lg:pl-20"
+        >
+          If you are interested to see more practical case studies with creative
+          flows for UI/UX design, here is the set of them.
+        </div>
+        <div
+          class="flex flex-col gap-2 md:flex-row md:gap-6 lg:gap-8 lg:-mt-10"
+        >
+          <!-- card 1 -->
+          <div
+            class="md:w-1/2 flex flex-col gap-6 p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img
+              src="images/wttracker-thumbnail.png"
+              alt=""
+              class="rounded-2xl"
+            />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">Water Tracker</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For tracking daily water intake and reminders, helping users
+                stay hydrated, improve health, and reach their hydration goals
+                effortlessly.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="watertrack.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="md:w-1/2 flex flex-col gap-6 p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img
+              src="images/psycall-thumbnail.png"
+              alt=""
+              class="rounded-2xl"
+            />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">PSYCALL</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For connecting users with professional psychologists through
+                seamless appointment scheduling.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="etour.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- contact section -->
       <div
-        class="flex flex-col gap-6 md:items-center pt-15 relative z-0 wow animate__animated animate__fadeInUp"
+        class="flex flex-col gap-6 md:items-center pt-15 relative z-0 wow animate__animated animate__fadeIn"
       >
         <div class="text-h3 xl:text-16 text-white/30 md:text-center w-full">
           Let's
