@@ -1,0 +1,538 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking Recipe | Henry</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="portfolio.js">
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    #cursor {
+      transition: all 20ms linear;
+    }
+  </style>
+  <body onmousemove="moveCursor(event)">
+    <div
+      id="cursor"
+      class="size-40 bg-primary-700 blur-100 rounded-full fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
+    ></div>
+    <div
+      class="bg-background max-w-screen overflow-hidden flex flex-col gap-12 lg:gap-32"
+    >
+      <!-- hero -->
+      <div class="relative">
+        <img src="images/cr-herosection.png" alt="" class="object-cover" />
+        <!-- navigation bar -->
+        <div
+          class="flex justify-between items-center py-3 w-full z-20 absolute top-0 px-5 sm:px-10 md:px-16"
+        >
+          <!-- personal logo -->
+          <a href="index.html" class="z-0">
+            <img src="images/logo.svg" alt="" class="hover:animate-pulse" />
+          </a>
+          <!-- menu -->
+          <div
+            id="desktopMenu"
+            class="flex gap-8 items-baseline ml-auto hidden sm:flex z-0"
+          >
+          <a
+              href="index.html"
+              class="font-inter text-white/80 text-sm lg:text-xl hover:text-white"
+              >Home</a
+            >  
+          <a
+              href="work.html"
+              class="font-inter text-white/80 text-sm lg:text-xl hover:text-white"
+              >Work</a
+            >
+            <a
+              href="about.html"
+              class="font-inter text-white/80 text-sm lg:text-xl hover:text-white"
+              >About</a
+            >
+            <!-- button -->
+            <div
+              class="flex items-center rounded-5 p-small bg-gradient-to-r from-secondary-700 to-primary-700 hover:shadow-buttonhover"
+            >
+              <a
+                href="mailto:hoaingoc.creative@gmail.com?subject=[VIA WEBSITE]"
+                class="font-inter text-white/80 text-sm lg:text-xl hover:text-white rounded-5 bg-background px-4 py-1 lg:px-8 lg:py-3"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          <svg
+            class="sm:hidden"
+            onclick="toggleMenu()"
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M4.5 16.5H28.5M4.5 8.5H28.5M4.5 24.5H28.5"
+              stroke="#F6F6F6"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <div
+            id="mobileMenu"
+            class="fixed top-0 right-0 h-screen w-screen flex flex-col gap-3 bg-background/80 backdrop-blur-md px-5 pt-2 hidden z-30"
+          >
+            <div class="flex justify-between items-center">
+              <img src="images/logo.svg" alt="" />
+              <svg
+                class="z-10"
+                onclick="toggleMenu()"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+              >
+                <path
+                  d="M30 10.5L10 30.5"
+                  stroke="#B100CF"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 10.5L30 30.5"
+                  stroke="#B100CF"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <a href="index.html" class="flex justify-between items-center pt-7">
+              <div class="font-inter font-light text-2xl text-white">Home</div>
+              <img
+                src="images/icon-white-arrow-up-right.png"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <div class="w-full h-xxs bg-white/60"></div>
+            <a href="work.html" class="flex justify-between items-center pt-6">
+              <div class="font-inter font-light text-2xl text-white">Work</div>
+              <img
+                src="images/icon-white-arrow-up-right.png"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <div class="w-full h-xxs bg-white/60"></div>
+            <a href="about.html" class="flex justify-between items-center pt-6">
+              <div class="font-inter font-light text-2xl text-white">About</div>
+              <img
+                src="images/icon-white-arrow-up-right.png"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <div class="w-full h-xxs bg-white/60"></div>
+            <a
+              href="mailto:hoaingoc.creative@gmail.com?subject=VIA WEBSITE"
+              class="flex justify-between items-center pt-6"
+            >
+              <div class="font-inter font-light text-2xl text-white">
+                Contact
+              </div>
+              <img
+                src="images/icon-white-arrow-up-right.png"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <div
+              class="absolute top-40 -left-12 -z-10 h-96 w-66 bg-secondary-600 blur-250"
+            ></div>
+            <div class="w-full h-xxs bg-white/60"></div>
+          </div>
+        </div>
+      </div>
+      <!-- tong quan -->
+      <div
+        class="flex flex-col gap-3 md:gap-4 lg:gap-5 z-10 px-5 sm:px-10 md:px-16"
+      >
+        <div class="font-inter text-white font-semibold text-3xl md:text-5xl">
+          Tổng quan
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl lg:w-270"
+        >
+          Ứng dụng hỗ trợ người dùng tìm kiếm, lưu trữ, chia sẻ và khám phá các
+          món ăn từ cộng đồng; đồng thời, kết nối những người đam mê nấu ăn lại
+          gần với nhau
+        </div>
+      </div>
+      <!-- van de giai phap -->
+      <div class="flex flex-col font-inter px-5 sm:px-10 md:px-16 z-10">
+        <!-- title -->
+        <div class="flex flex-col gap-3 md:gap-4 lg:gap-5">
+          <div class="text-white font-semibold text-3xl md:text-5xl">
+            Vấn đề & Giải pháp
+          </div>
+          <div class="text-neutral-100 font-light text-lg md:text-2xl">
+            Trải nghiệm nấu ăn tiện lợi, thông minh và cá nhân hóa
+          </div>
+        </div>
+        <div class="md:pt-12 lg:-mt-20">
+          <img src="images/cr-vanDeMd.png" alt="" class="lg:hidden px-4" />
+          <img
+            src="images/cr-vanDeLg.png"
+            alt=""
+            class="hidden lg:block lg:px-40"
+          />
+        </div>
+      </div>
+      <!-- market -->
+      <img
+        src="images/cr-market.png"
+        alt=""
+        class="-mt-14 md:-mt-20 lg:-mt-28 z-10"
+      />
+      <!-- user flow -->
+      <div
+        class="flex flex-col gap-3 md:gap-4 lg:gap-5 z-10 px-5 sm:px-10 md:px-16"
+      >
+        <div class="font-inter text-white font-semibold text-3xl md:text-5xl">
+          User Flow
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl lg:w-270"
+        >
+          User flow trực quan, logic chặt chẽ, giúp người dùng dễ dàng chọn món
+          và xử lý tình huống thiếu nguyên liệu. Tích hợp tính năng chia sẻ và
+          đánh giá tạo sự tương tác tốt.
+        </div>
+        <img src="images/cr-usflow.png" alt="" class="lg:-mt-16" />
+      </div>
+      <!-- wireframe -->
+      <div class="flex flex-col gap-3 md:gap-4 lg:gap-5 z-10">
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16"
+        >
+          Wireframe
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl lg:w-190 px-5 sm:px-10 md:px-16"
+        >
+          Phác thảo Wireframe tập trung vào người dùng và tạo nên những trải
+          nghiệm mượt mà
+        </div>
+        <img src="images/cr-wireframe.png" alt="" class="" />
+      </div>
+      <!-- typo -->
+      <div class="flex flex-col gap-3 md:gap-4 lg:gap-5 z-10">
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16"
+        >
+          Typography & Color
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl lg:w-190 px-5 sm:px-10 md:px-16"
+        >
+          Thiết kế sử dụng Montserrat làm typeface chính, kết hợp với 2 nhóm màu
+          chính là tím điện và nâu cam đất.
+        </div>
+        <div>
+          <img
+            src="images/cr-typo.png"
+            alt=""
+            class="lg:px-60 lg:pt-20 hidden lg:block"
+          />
+          <img
+            src="images/cr-typoMd.png"
+            alt=""
+            class="lg:hidden md:px-10 md:pt-10 px-4 pt-4"
+          />
+        </div>
+      </div>
+      <!-- visual -->
+      <div
+        class="flex flex-col items-center justify-center gap-3 md:gap-4 lg:gap-5 z-10"
+      >
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16 w-full text-left"
+        >
+          Visual Design
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl px-5 sm:px-10 md:px-16 w-full text-left"
+        >
+          Bắt đầu khám phá những công thức mới
+        </div>
+        <img
+          src="images/cr-visual.png"
+          alt=""
+          class="px-4 lg:-mt-20 md:-mt-8 -mt-4"
+        />
+      </div>
+      <!-- choose your best recipe -->
+      <div class="flex flex-col items-center gap-12 md:gap-16 lg:gap-24 z-10">
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16 w-full text-left"
+        >
+          Lựa chọn công thức nấu ăn phù hợp
+        </div>
+        <img
+          src="images/cr-chooseBestRecipe.png"
+          alt=""
+          class="lg:px-40 px-8"
+        />
+      </div>
+      <!-- Good meals -->
+      <div class="flex flex-col items-center gap-3 md:gap-4 lg:gap-5 z-10">
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16"
+        >
+          Những bữa ăn ngon
+        </div>
+        <div
+          class="font-inter text-neutral-100 font-light text-lg md:text-2xl px-5 sm:px-10 md:px-16"
+        >
+          Công thức nấu ăn chi tiết
+        </div>
+        <img src="images/cr-detailRecipe.png" alt="" class="lg:px-40 px-8" />
+      </div>
+      <!-- ko lo chay -->
+      <div
+        class="flex flex-col items-end gap-3 md:gap-4 lg:gap-5 z-10 lg:pt-32"
+      >
+        <div
+          class="flex flex-col justify-end lg:pr-16 gap-2 md:gap-4 lg:gap-6 items-center md:w-2/3 lg:w-240"
+        >
+          <div
+            class="font-inter text-white font-semibold text-3xl md:text-3xl lg:text-5xl px-5 sm:px-10 md:px-16"
+          >
+            Không lo cháy nồi
+          </div>
+          <div
+            class="font-inter text-neutral-100 font-light text-lg md:text-lg lg:text-2xl px-5 sm:px-10 md:px-16 text-center"
+          >
+            Ứng dụng mang lại trải nghiệm tuyệt vời khi tích hợp tính năng hẹn
+            giờ
+          </div>
+        </div>
+
+        <img
+          src="images/cr-chaynoi.png"
+          alt=""
+          class="lg:px-40 px-8 md:-mt-60 lg:-mt-96"
+        />
+      </div>
+      <!-- save and share -->
+      <div
+        class="flex flex-col items-center justify-center gap-3 md:gap-4 lg:gap-5 z-10"
+      >
+        <div
+          class="flex flex-col lg:pr-16 gap-2 md:gap-4 lg:gap-6 items-center"
+        >
+          <div
+            class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16"
+          >
+            Lưu và Chia sẻ
+          </div>
+          <div
+            class="font-inter text-neutral-100 font-light text-lg md:text-2xl px-5 sm:px-10 md:px-16 text-center"
+          >
+            Ứng dụng được thiết kế với mục đích kết nối cộng đồng yêu thích nấu
+            ăn
+          </div>
+        </div>
+        <img src="images/cr-share.png" alt="" class="pt-4 md:pt-12 lg:pt-20" />
+      </div>
+      <!-- visual design -->
+      <div
+        class="flex flex-col items-center justify-center gap-3 md:gap-4 lg:gap-5 z-10"
+      >
+        <div
+          class="font-inter text-white font-semibold text-3xl md:text-5xl px-5 sm:px-10 md:px-16"
+        >
+          Visual Design
+        </div>
+        <img
+          src="images/cr-vsdesign.png"
+          alt=""
+          class="pt-4 md:pt-12 lg:pt-20"
+        />
+      </div>
+      <!-- other cases -->
+      <div class="flex flex-col gap-3 lg:gap-8 lg:px-24 relative z-10">
+        <div
+          class="font-inter text-white font-bold text-lg md:text-3xl lg:text-4xl lg:pl-20"
+        >
+          Other case studies
+        </div>
+        <div
+          class="font-inter text-white text-sm md:text-lg md:w-120 lg:w-150 lg:pl-20 lg:-mt-4"
+        >
+          If you are interested to see more practical case studies with creative
+          flows for UI/UX design, here is the set of them.
+        </div>
+        <div
+          class="flex flex-col gap-2 md:flex-row md:gap-6 lg:gap-8 lg:-mt-10"
+        >
+          <!-- card 1 -->
+          <div
+            class="md:w-1/2 flex flex-col justify-between p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img
+              src="images/psycall-thumbnail.png"
+              alt=""
+              class="rounded-2xl lg:pt-10 lg:scale-110"
+            />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">PSYCALL</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For connecting users with professional psychologists through
+                seamless appointment scheduling.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="psycall.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="md:w-1/2 flex flex-col justify-between p-4 border border-secondary-700 bg-gradient-to-b from-white/5 via-white/5 to-primary-800/20 bg-opacity-40 rounded-5 shadow-cardw relative z-0 mt-7 md:mt-12 hover:shadow-cardshadowhover"
+          >
+            <img src="images/etour-thumbnail.png" alt="" class="rounded-2xl" />
+            <div class="flex flex-col gap-2">
+              <div class="font-anton text-4xl text-white/90">e-Tour</div>
+              <div class="font-inter text-4 leading-170p text-white/80">
+                For simplifying travel planning and booking, allowing users to
+                explore destinations, customize itineraries, and book tours
+                seamlessly.
+              </div>
+              <div
+                class="flex items-center rounded-5 mt-3 p-small bg-gradient-to-r from-secondary-700 to-primary-700 w-fit hover:shadow-buttonhover"
+              >
+                <a
+                  href="etour.html"
+                  class="font-inter text-4 leading-170p text-white/80 hover:text-white rounded-5 bg-background px-4 py-2"
+                >
+                  View case study
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="size-40 md:size-106 rounded-full bg-primary-700 blur-250 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
+        ></div>
+      </div>
+      <!-- contact section -->
+      <div
+        class="flex flex-col gap-6 md:items-center pt-6 md:pt-15 relative z-0 wow animate__animated animate__fadeIn"
+      >
+        <div class="text-h3 xl:text-16 text-white/30 md:text-center w-full">
+          Let's
+          <span
+            class="font-anton text-h3 xl:text-16 font-normal leading-120p text-white/80"
+            >Get in touch</span
+          >
+        </div>
+        <div
+          class="text-body1 md:text-center lg:text-lg lg:text-white/80 w-full md:w-120 lg:w-185 pt-4"
+        >
+          I’m always excited to connect and collaborate! Whether you have a
+          project idea, feedback on my work, or an opportunity to discuss, feel
+          free to reach out.
+        </div>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-7 justify-center">
+          <div class="flex gap-4 items-center">
+            <div
+              class="flex items-center justify-center p-2 bg-white/20 rounded-full size-10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.64089 2.4021C0.840248 0.929629 2.13956 0 3.49004 0H6.05848C7.34977 0 8.49619 0.826291 8.90453 2.05132L9.95397 5.19963C10.405 6.55283 9.60863 8.00362 8.22482 8.34957C7.88646 8.43416 7.76975 8.85554 8.01637 9.10216L11.3978 12.4836C11.6445 12.7303 12.0658 12.6135 12.1504 12.2752C12.4964 10.8914 13.9472 10.095 15.3004 10.546L18.4487 11.5955C19.6737 12.0038 20.5 13.1502 20.5 14.4415V17.01C20.5 18.3604 19.5704 19.6598 18.0979 19.8591C17.4114 19.9521 16.711 20 16 20C7.43959 20 0.5 13.0604 0.5 4.5C0.5 3.78898 0.547941 3.08863 0.64089 2.4021Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+
+            <div class="text-body1 hover:text-white">(+84) 397 617 144</div>
+          </div>
+          <a
+            href="mailto:hoaingoc.creative@gmail.com?subject=VIA WEBSITE"
+            class="flex gap-4 items-center"
+          >
+            <div
+              class="flex items-center justify-center p-2 bg-white/20 rounded-full size-10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="16"
+                viewBox="0 0 21 16"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.46802 5.86002e-07H16.532C16.9706 -1.16926e-05 17.3491 -2.25399e-05 17.6624 0.021351C17.9922 0.043855 18.3221 0.0933587 18.6481 0.228363C19.3831 0.532845 19.9672 1.11687 20.2716 1.85195C20.4066 2.17788 20.4561 2.50779 20.4787 2.83762C20.5 3.15088 20.5 3.52936 20.5 3.96801V12.032C20.5 12.4706 20.5 12.8491 20.4787 13.1624C20.4561 13.4922 20.4066 13.8221 20.2716 14.1481C19.9672 14.8831 19.3831 15.4672 18.6481 15.7716C18.3221 15.9066 17.9922 15.9561 17.6624 15.9787C17.3491 16 16.9706 16 16.532 16H4.46801C4.02936 16 3.65088 16 3.33762 15.9787C3.00779 15.9561 2.67788 15.9066 2.35195 15.7716C1.61687 15.4672 1.03284 14.8831 0.728363 14.1481C0.593359 13.8221 0.543855 13.4922 0.521351 13.1624C0.499977 12.8491 0.499988 12.4706 0.500001 12.032V3.96802C0.499988 3.52937 0.499977 3.15088 0.521351 2.83762C0.543855 2.50779 0.593359 2.17788 0.728363 1.85195C1.03284 1.11687 1.61687 0.532845 2.35195 0.228363C2.67788 0.0933587 3.00779 0.043855 3.33762 0.021351C3.65088 -2.25399e-05 4.02937 -1.16926e-05 4.46802 5.86002e-07ZM2.81774 2.27753C3.18142 1.86189 3.81318 1.81978 4.22882 2.18346L9.84178 7.0948C10.2188 7.4247 10.7818 7.4247 11.1588 7.0948L16.7717 2.18346C17.1874 1.81978 17.8191 1.86189 18.1828 2.27753C18.5465 2.69317 18.5044 3.32493 18.0888 3.68861L12.4758 8.59995C11.3447 9.58965 9.65585 9.58965 8.52477 8.59995L2.91181 3.68861C2.49617 3.32493 2.45405 2.69317 2.81774 2.27753Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="text-body1 hover:text-white">
+              hoaingoc.creative@gmail.com
+            </div>
+          </a>
+        </div>
+        <!-- <div class="flex gap-2 justify-center items-center pt-9">
+          <img src="images/icon-Instagram.png" alt="" /><img
+            src="images/icon-Linkedin.png"
+            alt=""
+          /><img src="images/icon-behance.png" alt="" />
+        </div> -->
+        <div
+          class="size-40 md:size-72 lg:size-130 bg-secondary-600 rounded-full blur-200 md:blur-400 lg:blur-800 absolute top-12 -left-44 -z-10"
+        ></div>
+      </div>
+      <!-- footer -->
+      <div class="w-full flex flex-col gap-5">
+        <div class="w-full h-xs bg-white/15"></div>
+        <div class="w-full flex justify-between items-center">
+          <div class="text-body2 italic">Henry</div>
+          <div class="text-body2 italic">2025</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
